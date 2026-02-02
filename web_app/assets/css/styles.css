@@ -23,7 +23,7 @@
 /* RESET */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html { font-size: 14px; scroll-behavior: smooth; }
 
 /* HIDE SCROLLBARS (while still allowing scroll) */
 * {
@@ -40,7 +40,7 @@ body {
     background-attachment: fixed;
     color: var(--text-primary);
     min-height: 100vh;
-    line-height: 1.5;
+    line-height: 1.2;
     overflow-x: hidden;
     padding-bottom: calc(var(--bottom-nav-height) + var(--safe-area-bottom));
 }
@@ -58,11 +58,71 @@ body {
     box-shadow: 0 2px 12px var(--shadow);
 }
 
+/* HEADER LOGO - Image and text side by side */
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--primary);
     text-decoration: none;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Logo image styling */
+.logo-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .logo-text,
+html.dark-mode .logo-text {
+    color: #ffb74d;
+}
+
+body.dark-mode .logo-img,
+html.dark-mode .logo-img {
+    filter: brightness(1.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .logo {
+        gap: 0.4rem;
+    }
+    
+    .logo-img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        gap: 0.3rem;
+    }
+    
+    .logo-img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .logo-text {
+        font-size: 19;
+    }
 }
 
 .nav { display: flex; gap: 0.5rem; }
@@ -231,7 +291,7 @@ input:focus, textarea:focus, select:focus {
     }
     
     .chat-header {
-        padding: 1rem;
+        padding: 12px;
         background: var(--surface);
         margin-bottom: 0;
     }
@@ -260,27 +320,79 @@ input:focus, textarea:focus, select:focus {
 .message { display: flex; gap: 0.75rem; margin-bottom: 1rem; animation: fadeIn 0.3s ease; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
+/* Added at the end of the file in UTILITIES section */
+
+/* IMAGE STYLING */
+.logo-img, .auth-logo-img, .avatar-img {
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Auth page logo image */
+.auth-logo-img {
+    width: 85px;
+    height: 85px;
+}
+
+/* Message avatar image */
+.avatar-img {
+    width: 40px;
+    height: 34px;
+}
+
+/* Dark mode adjustments for images */
+body.dark-mode .logo-img,
+html.dark-mode .logo-img {
+    filter: brightness(1.2);
+}
+
+@media (max-width: 480px) {
+    .message-avatar {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .logo-img {
+        width: 30px;
+        height: 30px;
+        margin-right: 6px;
+    }
+    
+    .auth-logo-img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .avatar-img {
+        width: 31px;
+        height: 28px;
+    }
+}
+
+/* Updated message-avatar to contain images */
 .message-avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, #ffe5b4, #f9d29d);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.5rem;
     flex-shrink: 0;
-}
+    overflow: hidden; /* Added to contain the image */
+  }
 
 .message-content {
     max-width: 80%;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 0.2rem;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.message-text { color: var(--text-primary); line-height: 1.5; word-wrap: break-word;  }
+.message-text { color: var(--text-primary); line-height: 1.4; word-wrap: break-word;  }
 .message-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.3rem; text-align: right; }
 
 .user-message { flex-direction: row-reverse; }
@@ -523,9 +635,9 @@ body.dark-mode ::-webkit-scrollbar-thumb { background: #ffb74d; }
 
 /* RESPONSIVE */
 @media (max-width: 480px) {
-    .chat-window { max-height: calc(100dvh - 280px); min-height: 250px; }
+    .chat-window { max-height: calc(105dvh - 280px); min-height: 250px; }
     .message-content { max-width: 85%; }
-    .message-avatar { width: 28px; height: 28px; font-size: 0.8rem; }
+    .message-avatar { width: 32px; height: 32px; font-size: 0.8rem; }
     .message { gap: 0.5rem; }
     h2 { font-size: 1.2rem; }
 }

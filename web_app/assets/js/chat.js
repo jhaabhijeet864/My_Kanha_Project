@@ -73,19 +73,21 @@ async function checkBackendStatus() {
  * Show welcome message
  */
 function showWelcomeMessage() {
-    const welcomeHtml = `
-        <div class="message krishna-message welcome-message">
-            <div class="message-avatar">🙏</div>
-            <div class="message-content">
-                <div class="message-text">
-                    Namaste, dear seeker! I am here to share the eternal wisdom of the Bhagavad Gita.
-                    Ask me anything about life, duty, purpose, or spiritual growth.
-                </div>
-                <div class="message-time">${getCurrentTime()}</div>
-            </div>
+const welcomeHtml = `
+    <div class="message krishna-message welcome-message">
+        <div class="message-avatar">
+            <img src="assets/images/k.ico" alt="Krishna" class="avatar-img">
         </div>
-    `;
-    chatWindow.insertAdjacentHTML('beforeend', welcomeHtml);
+        <div class="message-content">
+            <div class="message-text">
+                Namaste, dear seeker! I am here to share the eternal wisdom of the Bhagavad Gita.
+                Ask me anything about life, duty, purpose, or spiritual growth.
+            </div>
+            <div class="message-time">${getCurrentTime()}</div>
+        </div>
+    </div>
+`;  
+  chatWindow.insertAdjacentHTML('beforeend', welcomeHtml);
 }
 
 /**
@@ -179,14 +181,14 @@ function setLoading(loading) {
  */
 function addUserMessage(message) {
     const messageHtml = `
-        <div class="message user-message">
-            <div class="message-content">
-                <div class="message-text">${escapeHtml(message)}</div>
-                <div class="message-time">${getCurrentTime()}</div>
-            </div>
-            <div class="message-avatar">🙏</div>
+    <div class="message user-message">
+        <div class="message-content">
+            <div class="message-text">${escapeHtml(message)}</div>
+            <div class="message-time">${getCurrentTime()}</div>
         </div>
-    `;
+        <div class="message-avatar">👤</div>
+    </div>
+`;
     chatWindow.insertAdjacentHTML('beforeend', messageHtml);
     scrollToBottom(chatWindow);
 }
@@ -215,16 +217,18 @@ function addKrishnaMessage(response, sources = []) {
         `;
     }
 
-    const messageHtml = `
-        <div class="message krishna-message">
-            <div class="message-avatar">🙏</div>
-            <div class="message-content">
-                <div class="message-text">${escapeHtml(response)}</div>
-                ${sourcesHtml}
-                <div class="message-time">${getCurrentTime()}</div>
-            </div>
+const messageHtml = `
+    <div class="message krishna-message">
+        <div class="message-avatar">
+            <img src="assets/images/k.ico" alt="Krishna" class="avatar-img">
         </div>
-    `;
+        <div class="message-content">
+            <div class="message-text">${escapeHtml(response)}</div>
+            ${sourcesHtml}
+            <div class="message-time">${getCurrentTime()}</div>
+        </div>
+    </div>
+`;
 
     chatWindow.insertAdjacentHTML('beforeend', messageHtml);
     scrollToBottom(chatWindow);
@@ -237,16 +241,18 @@ function showTypingIndicator() {
     const existingIndicator = document.querySelector('.typing-indicator');
     if (existingIndicator) return;
 
-    const indicatorHtml = `
-        <div class="message krishna-message typing-indicator">
-            <div class="message-avatar">🙏</div>
-            <div class="message-content">
-                <div class="typing-dots">
-                    <span></span><span></span><span></span>
-                </div>
+const indicatorHtml = `
+    <div class="message krishna-message typing-indicator">
+        <div class="message-avatar">
+            <img src="assets/images/k.ico" alt="Krishna" class="avatar-img">
+        </div>
+        <div class="message-content">
+            <div class="typing-dots">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    `;
+    </div>
+`;
     chatWindow.insertAdjacentHTML('beforeend', indicatorHtml);
     scrollToBottom(chatWindow);
 }
