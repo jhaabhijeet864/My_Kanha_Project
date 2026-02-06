@@ -1,0 +1,22 @@
+{
+  "session_id": "c817685a-0542-4b2b-8b3d-aacb65a89a00",
+  "user_id": "312868de-659d-4fc1-abe7-13efc5121333",
+  "created_at": "2026-02-06T18:49:26.013342",
+  "last_updated": "2026-02-06T18:49:27.338561",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "tommorrow is my hackathon how i keep my mind calm",
+      "timestamp": "2026-02-06T18:49:27.338561",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can feel the excitement and a hint of nervousness about your hackathon tomorrow! It's completely natural to feel that way. To keep your mind calm, remember that you've prepared well for this moment. Instead of worrying about the outcome, focus on the process - enjoy the journey, the coding, the problem-solving. Take a few deep breaths, and as you inhale, repeat the word \"prana\" to yourself, filling your mind and body with fresh energy. As you exhale, let go of any tension or doubts. Trust in your abilities and have fun! What's the most challenging part of the hackathon that's been on your mind, and how can you tackle it with a clear mind?",
+      "timestamp": "2026-02-06T18:49:27.338561",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

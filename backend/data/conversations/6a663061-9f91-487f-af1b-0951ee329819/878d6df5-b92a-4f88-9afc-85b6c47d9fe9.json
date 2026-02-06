@@ -1,0 +1,22 @@
+{
+  "session_id": "878d6df5-b92a-4f88-9afc-85b6c47d9fe9",
+  "user_id": "6a663061-9f91-487f-af1b-0951ee329819",
+  "created_at": "2026-02-06T18:51:24.778967",
+  "last_updated": "2026-02-06T18:51:26.170546",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "which chatbot is more powerful gemini or chatgpt",
+      "timestamp": "2026-02-06T18:51:26.170546",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, you're curious about the power of these chatbots, Gemini and ChatGPT. That's a great question! You know, in life, we often get caught up in comparing and competing, but the truth is, each tool has its own unique strengths. Instead of focusing on which one is more powerful, why not think about what you want to achieve with these chatbots? What's your goal, priya? Are you looking to learn something new, or perhaps automate a task? Let's explore that together, and then we can discuss which tool might be the best fit for you. What's on your mind, and how can I help?",
+      "timestamp": "2026-02-06T18:51:26.170546",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}
