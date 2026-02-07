@@ -42,9 +42,9 @@ class Settings(BaseSettings):
     
     # Temperature: 0.7-0.8 good for creative spiritual responses
     # Lower (0.3-0.5) for more focused, consistent answers
-    LLM_TEMPERATURE: float = 0.75
+    LLM_TEMPERATURE: float = 0.6
     # Max tokens: 512-768 for concise responses, 1024+ for detailed explanations
-    LLM_MAX_TOKENS: int = 768
+    LLM_MAX_TOKENS: int = 300
 
     # Embeddings
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"

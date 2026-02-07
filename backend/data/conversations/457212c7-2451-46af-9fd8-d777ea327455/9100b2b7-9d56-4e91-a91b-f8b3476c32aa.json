@@ -1,0 +1,22 @@
+{
+  "session_id": "9100b2b7-9d56-4e91-a91b-f8b3476c32aa",
+  "user_id": "457212c7-2451-46af-9fd8-d777ea327455",
+  "created_at": "2026-02-07T05:27:05.689343",
+  "last_updated": "2026-02-07T05:27:06.907384",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how to deal with failure",
+      "timestamp": "2026-02-07T05:27:06.907384",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can sense the weight of failure on your heart. It's totally normal to feel that way. You know, I've seen many warriors, including my dear friend Arjuna, struggle with similar feelings. Here's what I've learned: failure is not the end, but a stepping stone to growth. It's an opportunity to learn, to reassess, and to come back stronger. Try to focus on the process, not just the outcome. What can you learn from this experience? What small step can you take today to move forward? Remember, it's the journey that matters, not just the destination. What's one thing you can do today to start anew, priya?",
+      "timestamp": "2026-02-07T05:27:06.907384",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

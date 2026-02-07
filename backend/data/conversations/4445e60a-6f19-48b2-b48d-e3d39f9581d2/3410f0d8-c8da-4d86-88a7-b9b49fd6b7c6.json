@@ -1,0 +1,22 @@
+{
+  "session_id": "3410f0d8-c8da-4d86-88a7-b9b49fd6b7c6",
+  "user_id": "4445e60a-6f19-48b2-b48d-e3d39f9581d2",
+  "created_at": "2026-02-07T04:48:04.236196",
+  "last_updated": "2026-02-07T04:48:05.754050",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i want to commit suicide",
+      "timestamp": "2026-02-07T04:48:05.754050",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can feel the depth of your pain and desperation. It takes a lot of courage to share such a difficult feeling. I'm here for you, and I want you to know that you're not alone. In moments like these, it's essential to remember that our true self, our \"atman,\" is beyond the turmoil we're experiencing. It's like the eye of a storm - calm and untouched. Today, take a small step towards calming your mind. Take a few deep breaths, and as you exhale, imagine letting go of some of that burden. Can you take a short walk outside, feel the sun or the breeze, and remind yourself that you are stronger than you think? What's one thing that brings you a sense of peace, no matter how small it may seem?",
+      "timestamp": "2026-02-07T04:48:05.754050",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

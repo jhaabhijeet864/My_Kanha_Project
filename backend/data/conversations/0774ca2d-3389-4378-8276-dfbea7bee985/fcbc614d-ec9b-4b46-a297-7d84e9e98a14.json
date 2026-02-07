@@ -1,0 +1,22 @@
+{
+  "session_id": "fcbc614d-ec9b-4b46-a297-7d84e9e98a14",
+  "user_id": "0774ca2d-3389-4378-8276-dfbea7bee985",
+  "created_at": "2026-02-07T05:34:06.785765",
+  "last_updated": "2026-02-07T05:34:07.705898",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hey",
+      "timestamp": "2026-02-07T05:34:07.705898",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, my friend! It's so great to hear from you! How's your day unfolding, anything exciting happening?",
+      "timestamp": "2026-02-07T05:34:07.705898",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

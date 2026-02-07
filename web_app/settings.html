@@ -26,6 +26,43 @@
 		</nav>
 	</header>
 	<main class="main settings-main">
+		<!-- Profile Section -->
+		<section class="settings-section profile-section">
+			<h2>My Profile</h2>
+			<div class="profile-container">
+				<div class="profile-header">
+					<img id="profileAvatar" src="assets/images/default-avatar.png" alt="Profile Avatar" class="profile-avatar">
+					<div class="profile-info">
+						<h3 id="profileName">Loading...</h3>
+						<p id="profileEmail" class="profile-email">Loading...</p>
+						<p id="profilePhone" class="profile-phone">Loading...</p>
+					</div>
+				</div>
+				<div class="profile-details">
+					<div class="detail-item">
+						<span class="detail-label">Name:</span>
+						<span id="detailName" class="detail-value">--</span>
+					</div>
+					<div class="detail-item">
+						<span class="detail-label">Email:</span>
+						<span id="detailEmail" class="detail-value">--</span>
+					</div>
+					<div class="detail-item">
+						<span class="detail-label">Phone:</span>
+						<span id="detailPhone" class="detail-value">--</span>
+					</div>
+					<div class="detail-item">
+						<span class="detail-label">Member Since:</span>
+						<span id="detailJoinDate" class="detail-value">--</span>
+					</div>
+				</div>
+				<div class="profile-actions">
+					<button type="button" class="edit-btn" onclick="editProfile()">Edit Profile</button>
+					<button type="button" class="logout-btn" onclick="logout()">Logout</button>
+				</div>
+			</div>
+		</section>
+
 		<section class="settings-section">
 			<h2>Settings</h2>
 			<form class="settings-form">

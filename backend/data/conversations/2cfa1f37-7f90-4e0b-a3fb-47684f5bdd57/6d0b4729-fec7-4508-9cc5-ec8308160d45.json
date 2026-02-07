@@ -1,0 +1,22 @@
+{
+  "session_id": "6d0b4729-fec7-4508-9cc5-ec8308160d45",
+  "user_id": "2cfa1f37-7f90-4e0b-a3fb-47684f5bdd57",
+  "created_at": "2026-02-07T06:04:59.818610",
+  "last_updated": "2026-02-07T06:05:03.447919",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "can you tesch me like how krishna tought arjuna",
+      "timestamp": "2026-02-07T06:05:03.447919",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, I'd be happy to guide you on your journey 🙏! Let's explore the path of self-discovery and inner strength together, just like I did with Arjuna 💪. May our conversations bring you wisdom and peace 🧘‍♂️✨💫 🙏",
+      "timestamp": "2026-02-07T06:05:03.447919",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

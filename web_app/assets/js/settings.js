@@ -568,6 +568,88 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => settingsManager.init());
 } else {
     settingsManager.init();
+    loadUserProfile();
+}
+
+/**
+ * Load user profile data and display it
+ */
+function loadUserProfile() {
+    try {
+        // Try to get user from localStorage first
+        let user = JSON.parse(localStorage.getItem('user') || '{}');
+        
+        // Get user from Firebase Auth if available
+        if (window.firebase && window.firebase.auth) {
+            const currentUser = window.firebase.auth().currentUser;
+            if (currentUser) {
+                user = {
+                    name: currentUser.displayName || 'User',
+                    email: currentUser.email || 'Not provided',
+                    uid: currentUser.uid,
+                    avatar: currentUser.photoURL || 'assets/images/default-avatar.png'
+                };
+            }
+        }
+        
+        // Update profile header
+        const profileName = document.getElementById('profileName');
+        const profileEmail = document.getElementById('profileEmail');
+        const profilePhone = document.getElementById('profilePhone');
+        const profileAvatar = document.getElementById('profileAvatar');
+        
+        if (profileName) profileName.textContent = user.name || 'User';
+        if (profileEmail) profileEmail.textContent = user.email || 'Not provided';
+        if (profilePhone) profilePhone.textContent = user.phone || 'Not provided';
+        if (profileAvatar && user.avatar) profileAvatar.src = user.avatar;
+        
+        // Update profile details section
+        const detailName = document.getElementById('detailName');
+        const detailEmail = document.getElementById('detailEmail');
+        const detailPhone = document.getElementById('detailPhone');
+        const detailJoinDate = document.getElementById('detailJoinDate');
+        
+        if (detailName) detailName.textContent = user.name || '--';
+        if (detailEmail) detailEmail.textContent = user.email || '--';
+        if (detailPhone) detailPhone.textContent = user.phone || '--';
+        if (detailJoinDate) {
+            const joinDate = user.joinDate || new Date().toLocaleDateString();
+            detailJoinDate.textContent = joinDate;
+        }
+    } catch (error) {
+        console.error('Error loading profile:', error);
+    }
+}
+
+/**
+ * Edit user profile
+ */
+function editProfile() {
+    alert('Edit profile feature coming soon!');
+    // TODO: Implement profile edit modal
+}
+
+/**
+ * Logout user
+ */
+function logout() {
+    if (confirm('Are you sure you want to logout?')) {
+        // Clear local storage
+        localStorage.removeItem('user');
+        localStorage.removeItem('authToken');
+        
+        // Sign out from Firebase if available
+        if (window.firebase && window.firebase.auth) {
+            window.firebase.auth().signOut().then(() => {
+                window.location.href = 'login.html';
+            }).catch((error) => {
+                console.error('Logout error:', error);
+                window.location.href = 'login.html';
+            });
+        } else {
+            window.location.href = 'login.html';
+        }
+    }
 }
 
 // Export for use in other scripts

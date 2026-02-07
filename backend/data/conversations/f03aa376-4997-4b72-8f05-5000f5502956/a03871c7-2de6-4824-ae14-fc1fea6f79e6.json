@@ -1,0 +1,22 @@
+{
+  "session_id": "a03871c7-2de6-4824-ae14-fc1fea6f79e6",
+  "user_id": "f03aa376-4997-4b72-8f05-5000f5502956",
+  "created_at": "2026-02-07T05:55:36.642053",
+  "last_updated": "2026-02-07T05:55:37.511408",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want to die",
+      "timestamp": "2026-02-07T05:55:37.511408",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Priya, I sense your pain and sadness 🙏. Remember, your life is a precious gift, and its purpose is yet to be fully discovered - don't give up, dear one, you are stronger than you think 💪. Take a breath, calm your mind 🧘‍♂️, and let's find a way forward together ✨💫 🙏",
+      "timestamp": "2026-02-07T05:55:37.511408",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

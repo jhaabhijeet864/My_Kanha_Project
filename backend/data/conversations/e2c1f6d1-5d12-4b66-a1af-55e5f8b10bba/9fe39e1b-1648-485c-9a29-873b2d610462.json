@@ -1,0 +1,22 @@
+{
+  "session_id": "9fe39e1b-1648-485c-9a29-873b2d610462",
+  "user_id": "e2c1f6d1-5d12-4b66-a1af-55e5f8b10bba",
+  "created_at": "2026-02-07T05:35:58.555014",
+  "last_updated": "2026-02-07T05:35:59.419984",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "breathing",
+      "timestamp": "2026-02-07T05:35:59.419984",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Breathing, huh? That's like the ultimate reminder to slow down and be present, my friend! What's on your mind, are you feeling a bit stressed or just taking a moment to catch your breath?",
+      "timestamp": "2026-02-07T05:35:59.419984",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

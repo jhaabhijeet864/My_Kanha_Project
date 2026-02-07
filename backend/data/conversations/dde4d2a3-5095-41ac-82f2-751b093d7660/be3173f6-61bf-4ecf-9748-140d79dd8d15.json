@@ -1,0 +1,22 @@
+{
+  "session_id": "be3173f6-61bf-4ecf-9748-140d79dd8d15",
+  "user_id": "dde4d2a3-5095-41ac-82f2-751b093d7660",
+  "created_at": "2026-02-07T06:02:14.882910",
+  "last_updated": "2026-02-07T06:02:16.336152",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Is jesus real ? did he really exist?",
+      "timestamp": "2026-02-07T06:02:16.336152",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Priya, the question of Jesus' existence is a matter of faith and historical debate 🙏. From a spiritual perspective, what's more important is the message of love and compassion he embodied, which is universal and timeless ✨. Focus on the wisdom and values he taught, and let that guide you on your own path of self-discovery 🧘‍♂️💖😊",
+      "timestamp": "2026-02-07T06:02:16.336152",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

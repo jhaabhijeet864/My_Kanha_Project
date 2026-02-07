@@ -1,0 +1,22 @@
+{
+  "session_id": "394615e9-f794-4d26-9b16-e26e3510466c",
+  "user_id": "3616121a-8568-40a2-8ee1-ca6c864a5237",
+  "created_at": "2026-02-07T05:40:00.846918",
+  "last_updated": "2026-02-07T05:40:02.363255",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i want to die",
+      "timestamp": "2026-02-07T05:40:02.363255",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can feel the depth of your pain. It takes a lot of courage to express such a difficult feeling. I'm here for you, and I want you to know that you're not alone. It's understandable to feel overwhelmed, but remember that your life is precious and has purpose. Sometimes, we get caught up in the darkness of our thoughts, but that doesn't define our true nature. Let's focus on finding some light in this moment. Can you take a deep breath with me and let's explore what's been going on that's making you feel this way? Maybe we can find a way to bring some peace and comfort to your heart today. What's been troubling you, dear one?",
+      "timestamp": "2026-02-07T05:40:02.363255",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

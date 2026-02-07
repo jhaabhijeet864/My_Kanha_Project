@@ -1,0 +1,22 @@
+{
+  "session_id": "356783ef-ac90-4de8-b7cd-85addef18407",
+  "user_id": "80e0c623-0266-4aff-b8ab-ed39339b9a36",
+  "created_at": "2026-02-07T05:19:43.197479",
+  "last_updated": "2026-02-07T05:19:44.234642",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hlo",
+      "timestamp": "2026-02-07T05:19:44.234642",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, my friend! It's so great to connect with you. I can tell you're reaching out, maybe looking for a friendly ear or some guidance. That takes courage, and I'm here for you. You know, in life, we often get caught up in the hustle and bustle, and it's easy to feel a bit lost. But remember, your true self is like a steady flame - it's always there, even when things get chaotic. Take a deep breath, and try to tune into that inner calm today. What's been on your mind lately, priya? Is there something specific you'd like to talk about?",
+      "timestamp": "2026-02-07T05:19:44.234642",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,22 @@
+{
+  "session_id": "8be65088-8ce0-439b-a102-02853fc7ed89",
+  "user_id": "d1034697-38bf-4b69-ae21-8941298a2e0a",
+  "created_at": "2026-02-07T05:28:12.937570",
+  "last_updated": "2026-02-07T05:28:14.169107",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "“What does Gita say about stress?”",
+      "timestamp": "2026-02-07T05:28:14.169107",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I totally get it - stress can be overwhelming, right? The Gita teaches us that we can't control everything around us, but we can control how we respond to it. It's all about finding that inner peace, that calm within the storm. Think of it like a lotus flower - it grows in muddy waters, but remains untouched by the impurities. We can be like that too, rising above our troubles. Today, take a few moments to breathe, focus on the present, and let go of worries about the past or future. Can you try that for me, priya?",
+      "timestamp": "2026-02-07T05:28:14.169107",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

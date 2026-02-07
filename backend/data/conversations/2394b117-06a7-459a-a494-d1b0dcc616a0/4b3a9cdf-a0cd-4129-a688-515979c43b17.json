@@ -1,0 +1,22 @@
+{
+  "session_id": "4b3a9cdf-a0cd-4129-a688-515979c43b17",
+  "user_id": "2394b117-06a7-459a-a494-d1b0dcc616a0",
+  "created_at": "2026-02-07T06:04:07.089356",
+  "last_updated": "2026-02-07T06:04:07.947152",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I am in depression br o",
+      "timestamp": "2026-02-07T06:04:07.947152",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Dear one, I'm here for you 🙏. Remember, your true self is beyond these fleeting emotions, and with self-love and mindfulness 🧘‍♂️, you can find strength to overcome this darkness. Stay strong, friend, and know you're not alone 💪✨💫",
+      "timestamp": "2026-02-07T06:04:07.947152",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,22 @@
+{
+  "session_id": "984fe559-177e-441b-a5f2-7ad600019c60",
+  "user_id": "1196600a-cabd-450c-ad6b-48e27b266592",
+  "created_at": "2026-02-07T05:36:21.054375",
+  "last_updated": "2026-02-07T05:36:22.743945",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "stressed",
+      "timestamp": "2026-02-07T05:36:22.743945",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can feel the weight of stress in your words. It's like a big cloud is hovering over you, isn't it? Remember, you are not your stress - you are the calm sky behind those clouds. In life, we can't control everything, but we can control how we respond to it. Take a deep breath, and let's break it down together. What's one thing that's causing you the most stress right now? Can you take a small step back, and look at it with fresh eyes? Sometimes, a little perspective shift can make all the difference. What do you say, shall we explore this further?",
+      "timestamp": "2026-02-07T05:36:22.743945",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

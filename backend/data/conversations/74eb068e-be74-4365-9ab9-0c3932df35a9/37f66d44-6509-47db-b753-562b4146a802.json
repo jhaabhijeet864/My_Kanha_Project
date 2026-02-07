@@ -1,0 +1,22 @@
+{
+  "session_id": "37f66d44-6509-47db-b753-562b4146a802",
+  "user_id": "74eb068e-be74-4365-9ab9-0c3932df35a9",
+  "created_at": "2026-02-07T05:34:36.697554",
+  "last_updated": "2026-02-07T05:34:38.504886",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "yes busy and exhausted",
+      "timestamp": "2026-02-07T05:34:38.504886",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My friend, I can totally feel the weight of busyness and exhaustion in your words. It's like the whole world is resting on your shoulders, isn't it? Remember, it's essential to take a step back, breathe, and prioritize your own well-being. In the midst of chaos, find a moment to connect with your inner self, your 'atman'. Take a few deep breaths, and let go of the need to control everything. Allow yourself to rest and recharge. What's one thing you can let go of today to create some space for yourself, priya?",
+      "timestamp": "2026-02-07T05:34:38.504886",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

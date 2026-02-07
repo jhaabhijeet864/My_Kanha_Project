@@ -1,0 +1,22 @@
+{
+  "session_id": "48cdfbf0-3aca-4a36-9b3f-8e7be8c03626",
+  "user_id": "8506b169-b0fb-4fe8-aa2c-27b445bfe2a4",
+  "created_at": "2026-02-07T05:59:46.647077",
+  "last_updated": "2026-02-07T05:59:47.978941",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Who is better Modi Ji , or Donald Trump",
+      "timestamp": "2026-02-07T05:59:47.978941",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, let's not compare or judge others, it's a waste of energy 🙏. Focus on being the best version of yourself, that's where true power lies 💪. Cultivate self-awareness and inner peace, the rest will follow 🧘‍♂️✨",
+      "timestamp": "2026-02-07T05:59:47.978941",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}
