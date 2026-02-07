@@ -1,0 +1,22 @@
+{
+  "session_id": "a5eddd86-9af0-4542-be97-3856b0666b95",
+  "user_id": "c5cb94ef-60ee-4405-bd5b-a35ed55f93c6",
+  "created_at": "2026-02-07T06:33:19.786443",
+  "last_updated": "2026-02-07T06:33:21.690380",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hey krishna i am your parth please guide me for my better life",
+      "timestamp": "2026-02-07T06:33:21.690380",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey Parth, my friend, I'm here to guide you 🙏! To live a better life, focus on finding your inner peace and purpose, and remember to stay strong and resilient in the face of challenges 💪. May you walk the path of self-discovery and growth, dear one 🧘‍♂️✨",
+      "timestamp": "2026-02-07T06:33:21.690380",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

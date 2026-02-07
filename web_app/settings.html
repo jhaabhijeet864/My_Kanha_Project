@@ -57,7 +57,7 @@
 					</div>
 				</div>
 				<div class="profile-actions">
-					<button type="button" class="edit-btn" onclick="editProfile()">Edit Profile</button>
+					<button type="button" class="edit-btn" onclick="openProfileModal()">View Details</button>
 					<button type="button" class="logout-btn" onclick="logout()">Logout</button>
 				</div>
 			</div>
@@ -140,6 +140,37 @@
 			<span class="bottom-nav-label">Settings</span>
 		</a>
 	</nav>
+
+	<!-- Profile Details Modal -->
+	<div id="profileModal" class="modal">
+		<div class="modal-overlay" onclick="closeProfileModal()"></div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2>Profile Details</h2>
+				<button type="button" class="modal-close" onclick="closeProfileModal()">&times;</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-profile-section">
+					<div class="modal-avatar-container">
+						<img id="modalProfileAvatar" src="assets/images/default-avatar.png" alt="Profile" class="modal-avatar">
+					</div>
+					<h3 id="modalProfileName">Loading...</h3>
+					<p id="modalProfileEmail" class="modal-subtitle">Loading...</p>
+				</div>
+
+				
+					<div class="modal-detail-row">
+						<span class="modal-detail-label">Account Status</span>
+						<span id="modalDetailStatus" class="modal-detail-value status-active">Active</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="modal-btn-primary" onclick="editProfile()">Edit Profile</button>
+				<button type="button" class="modal-btn-secondary" onclick="closeProfileModal()">Close</button>
+			</div>
+		</div>
+	</div>
 
 	<script src="assets/js/settings.js"></script>
 	<script src="assets/js/pwa.js"></script>

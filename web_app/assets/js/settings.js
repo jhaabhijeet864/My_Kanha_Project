@@ -630,6 +630,95 @@ function editProfile() {
 }
 
 /**
+ * Open profile modal
+ */
+function openProfileModal() {
+    const modal = document.getElementById('profileModal');
+    if (modal) {
+        modal.classList.add('active');
+        updateProfileModal();
+        // Prevent body scroll when modal is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * Close profile modal
+ */
+function closeProfileModal() {
+    const modal = document.getElementById('profileModal');
+    if (modal) {
+        modal.classList.remove('active');
+        // Restore body scroll
+        document.body.style.overflow = '';
+    }
+}
+
+/**
+ * Update modal with user data
+ */
+function updateProfileModal() {
+    try {
+        // Get user data from localStorage
+        let user = JSON.parse(localStorage.getItem('user') || '{}');
+        
+        // Get user from Firebase Auth if available
+        if (window.firebase && window.firebase.auth) {
+            const currentUser = window.firebase.auth().currentUser;
+            if (currentUser) {
+                user = {
+                    name: currentUser.displayName || 'User',
+                    email: currentUser.email || 'Not provided',
+                    uid: currentUser.uid,
+                    avatar: currentUser.photoURL || 'assets/images/default-avatar.png',
+                    phone: user.phone || 'Not provided',
+                    joinDate: user.joinDate || new Date().toLocaleDateString()
+                };
+            }
+        }
+        
+        // Update modal profile section
+        const modalProfileName = document.getElementById('modalProfileName');
+        const modalProfileEmail = document.getElementById('modalProfileEmail');
+        const modalProfileAvatar = document.getElementById('modalProfileAvatar');
+        
+        if (modalProfileName) modalProfileName.textContent = user.name || 'User';
+        if (modalProfileEmail) modalProfileEmail.textContent = user.email || 'Not provided';
+        if (modalProfileAvatar && user.avatar) modalProfileAvatar.src = user.avatar;
+        
+        // Update modal details
+        const modalDetailName = document.getElementById('modalDetailName');
+        const modalDetailEmail = document.getElementById('modalDetailEmail');
+        const modalDetailPhone = document.getElementById('modalDetailPhone');
+        const modalDetailJoinDate = document.getElementById('modalDetailJoinDate');
+        const modalDetailStatus = document.getElementById('modalDetailStatus');
+        
+        if (modalDetailName) modalDetailName.textContent = user.name || '--';
+        if (modalDetailEmail) modalDetailEmail.textContent = user.email || '--';
+        if (modalDetailPhone) modalDetailPhone.textContent = user.phone || '--';
+        if (modalDetailJoinDate) {
+            const joinDate = user.joinDate || new Date().toLocaleDateString();
+            modalDetailJoinDate.textContent = joinDate;
+        }
+        if (modalDetailStatus) modalDetailStatus.textContent = 'Active';
+    } catch (error) {
+        console.error('Error updating modal:', error);
+    }
+}
+
+/**
+ * Close modal when clicking outside
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeProfileModal();
+        }
+    });
+});
+
+/**
  * Logout user
  */
 function logout() {
