@@ -1,0 +1,154 @@
+{
+  "session_id": "34a40310-bb50-40a8-92b3-cb6d0d600e64",
+  "user_id": "7a25332e-490c-4c9d-acd1-6c12b6de5bb6",
+  "created_at": "2026-02-07T09:56:54.539825",
+  "last_updated": "2026-02-07T09:56:56.446897",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Why am i getting so greedy",
+      "timestamp": "2026-02-07T09:56:56.446897",
+      "sources": [
+        {
+          "verse_id": "ch3_v12",
+          "chapter": 3,
+          "verse": 12,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "इष्टान्भोगान्हि वो देवा दास्यन्ते यज्ञभाविताः। | तैर्दत्तानप्रदायैभ्यो यो भुङ्क्ते स्तेन एव सः",
+          "transliteration": "",
+          "english": "The gods, nourished by the sacrifice, will give you the desired objects. So, he who enjoys the objects given by the gods without offering anything in return is indeed a thief.",
+          "hindi": "।।3.12।। यज्ञसे भावित (पुष्ट) हुए देवता भी तुमलोगोंको (बिना माँगे ही) कर्तव्य-पालनकी आवश्यक सामग्री देते रहेंगे। इस प्रकार उन देवताओंसे प्राप्त हुई सामग्रीको दूसरोंकी सेवामें लगाये बिना जो मनुष्य स्वयं ही उसका उपभोग करता है, वह चोर ही है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2581
+        },
+        {
+          "verse_id": "ch17_v21",
+          "chapter": 17,
+          "verse": 21,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः।दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम्",
+          "transliteration": "",
+          "english": "And, that gift which is given with the intention of receiving something in return, or expecting a reward, or begrudgingly, is considered to be Rajasic.",
+          "hindi": "।।17.21।।किन्तु जो दान प्रत्युपकारके लिये अथवा फलप्राप्तिका उद्देश्य बनाकर फिर क्लेशपूर्वक दिया जाता है, वह दान राजस कहा जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.204
+        },
+        {
+          "verse_id": "ch16_v15",
+          "chapter": 16,
+          "verse": 15,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आढ्योऽभिजनवानस्मि कोऽन्योऽस्ति सदृशो मया।यक्ष्ये दास्यामि मोदिष्य इत्यज्ञानविमोहिताः",
+          "transliteration": "",
+          "english": "\"I am wealthy and born into a noble family. Who is my equal? I shall perform sacrifices, give charity, and rejoice,\" thus deluded by ignorance.",
+          "hindi": "।।16.15।।हम धनवान् हैं, बहुत-से मनुष्य हमारे पास हैं, हमारे समान और कौन है? हम खूब यज्ञ करेंगे, दान देंगे और मौज करेंगे -- इस तरह वे अज्ञानसे मोहित रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1965
+        },
+        {
+          "verse_id": "ch3_v13",
+          "chapter": 3,
+          "verse": 13,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः। | भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्",
+          "transliteration": "",
+          "english": "The righteous who eat the remnants of the sacrifice are freed from all sins; but those sinful ones who cook food solely for their own sake indeed consume sin.",
+          "hindi": "।।3.13।। यज्ञशेष- (योग-) का अनुभव करनेवाले श्रेष्ठ मनुष्य सम्पूर्ण पापोंसे मुक्त हो जाते हैं। परन्तु जो केवल अपने लिये ही पकाते अर्थात् सब कर्म करते हैं, वे पापीलोग तो पापका ही भक्षण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1754
+        },
+        {
+          "verse_id": "ch17_v11",
+          "chapter": 17,
+          "verse": 11,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते।यष्टव्यमेवेति मनः समाधाय स सात्त्विकः",
+          "transliteration": "",
+          "english": "That sacrifice which is offered by men without desire for reward, as enjoined by the ordinance (scripture), with a firm faith that doing so is their duty, is Sattvic or pure.",
+          "hindi": "।।17.11।।यज्ञ करना कर्तव्य है -- इस तरह मनको समाधान करके फलेच्छारहित मनुष्योंद्वारा जो शास्त्रविधिसे नियत यज्ञ किया जाता है, वह सात्त्विक है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1739
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, it's natural to desire things, but when it becomes an obsession, it's time to reflect 🙏. Remember, true happiness comes from a sense of gratitude and giving, not just taking - it's like a sacrifice to the universe, and the universe gives back in return 💫. Let's cultivate a sense of detachment and inner peace, priya, through meditation and self-reflection 🧘‍♂️✨",
+      "timestamp": "2026-02-07T09:56:56.446897",
+      "sources": [
+        {
+          "verse_id": "ch3_v12",
+          "chapter": 3,
+          "verse": 12,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "इष्टान्भोगान्हि वो देवा दास्यन्ते यज्ञभाविताः। | तैर्दत्तानप्रदायैभ्यो यो भुङ्क्ते स्तेन एव सः",
+          "transliteration": "",
+          "english": "The gods, nourished by the sacrifice, will give you the desired objects. So, he who enjoys the objects given by the gods without offering anything in return is indeed a thief.",
+          "hindi": "।।3.12।। यज्ञसे भावित (पुष्ट) हुए देवता भी तुमलोगोंको (बिना माँगे ही) कर्तव्य-पालनकी आवश्यक सामग्री देते रहेंगे। इस प्रकार उन देवताओंसे प्राप्त हुई सामग्रीको दूसरोंकी सेवामें लगाये बिना जो मनुष्य स्वयं ही उसका उपभोग करता है, वह चोर ही है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2581
+        },
+        {
+          "verse_id": "ch17_v21",
+          "chapter": 17,
+          "verse": 21,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः।दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम्",
+          "transliteration": "",
+          "english": "And, that gift which is given with the intention of receiving something in return, or expecting a reward, or begrudgingly, is considered to be Rajasic.",
+          "hindi": "।।17.21।।किन्तु जो दान प्रत्युपकारके लिये अथवा फलप्राप्तिका उद्देश्य बनाकर फिर क्लेशपूर्वक दिया जाता है, वह दान राजस कहा जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.204
+        },
+        {
+          "verse_id": "ch16_v15",
+          "chapter": 16,
+          "verse": 15,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आढ्योऽभिजनवानस्मि कोऽन्योऽस्ति सदृशो मया।यक्ष्ये दास्यामि मोदिष्य इत्यज्ञानविमोहिताः",
+          "transliteration": "",
+          "english": "\"I am wealthy and born into a noble family. Who is my equal? I shall perform sacrifices, give charity, and rejoice,\" thus deluded by ignorance.",
+          "hindi": "।।16.15।।हम धनवान् हैं, बहुत-से मनुष्य हमारे पास हैं, हमारे समान और कौन है? हम खूब यज्ञ करेंगे, दान देंगे और मौज करेंगे -- इस तरह वे अज्ञानसे मोहित रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1965
+        },
+        {
+          "verse_id": "ch3_v13",
+          "chapter": 3,
+          "verse": 13,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः। | भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्",
+          "transliteration": "",
+          "english": "The righteous who eat the remnants of the sacrifice are freed from all sins; but those sinful ones who cook food solely for their own sake indeed consume sin.",
+          "hindi": "।।3.13।। यज्ञशेष- (योग-) का अनुभव करनेवाले श्रेष्ठ मनुष्य सम्पूर्ण पापोंसे मुक्त हो जाते हैं। परन्तु जो केवल अपने लिये ही पकाते अर्थात् सब कर्म करते हैं, वे पापीलोग तो पापका ही भक्षण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1754
+        },
+        {
+          "verse_id": "ch17_v11",
+          "chapter": 17,
+          "verse": 11,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "अफलाकाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते।यष्टव्यमेवेति मनः समाधाय स सात्त्विकः",
+          "transliteration": "",
+          "english": "That sacrifice which is offered by men without desire for reward, as enjoined by the ordinance (scripture), with a firm faith that doing so is their duty, is Sattvic or pure.",
+          "hindi": "।।17.11।।यज्ञ करना कर्तव्य है -- इस तरह मनको समाधान करके फलेच्छारहित मनुष्योंद्वारा जो शास्त्रविधिसे नियत यज्ञ किया जाता है, वह सात्त्विक है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.1739
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

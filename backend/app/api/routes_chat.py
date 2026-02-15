@@ -54,8 +54,10 @@ def _to_verse_source(verse: dict) -> VerseSource:
         raise ValueError("Verse data missing chapter or verse number")
 
     return VerseSource(
+        verse_id=verse.get("verse_id"),
         chapter=int(chapter_raw),
         verse=int(verse_raw),
+        chapter_name=verse.get("chapter_name", ""),
         sanskrit=verse.get("sanskrit", ""),
         english=verse.get("english_translation") or verse.get("english", ""),
         hindi=verse.get("hindi_translation") or verse.get("hindi", ""),
@@ -149,9 +151,12 @@ async def chat(request: ChatRequest, user_id: Optional[str] = Depends(get_option
         # Save conversation to persistent storage
         save_conversation(session)
 
+        # Convert VerseSource objects to dictionaries for response
+        sources_dicts = [s.model_dump() if hasattr(s, 'model_dump') else s for s in response.sources] if response.sources else []
+
         return ChatResponse(
             response=response.text,
-            sources=response.sources,  # Will be empty for casual, verses for spiritual
+            sources=sources_dicts,  # Will be empty for casual, verses for spiritual
             language=detected_language,
             metadata=response.metadata,
             session_id=session_id,
@@ -199,6 +204,7 @@ async def chat_stream(request: ChatRequest, user_id: Optional[str] = Depends(get
 
             async def safety_response():
                 chunk = StreamChunk(
+                    type="complete",
                     content=safety_result.safe_response,
                     is_complete=True,
                     sources=[],
@@ -251,10 +257,12 @@ async def chat_stream(request: ChatRequest, user_id: Optional[str] = Depends(get
                 save_conversation(session)
 
                 # Send final chunk with sources (empty for casual, verses for spiritual)
+                sources_dicts = [s.model_dump() if hasattr(s, 'model_dump') else s for s in normalized_sources] if normalized_sources else []
                 final_chunk = StreamChunk(
+                    type="complete",
                     content="",
                     is_complete=True,
-                    sources=normalized_sources if normalized_sources else [],
+                    sources=sources_dicts,
                 )
                 yield f"data: {final_chunk.model_dump_json()}\n\n"
 

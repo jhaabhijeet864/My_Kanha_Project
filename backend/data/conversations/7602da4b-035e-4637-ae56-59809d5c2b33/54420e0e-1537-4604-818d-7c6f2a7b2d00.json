@@ -1,0 +1,154 @@
+{
+  "session_id": "54420e0e-1537-4604-818d-7c6f2a7b2d00",
+  "user_id": "7602da4b-035e-4637-ae56-59809d5c2b33",
+  "created_at": "2026-02-07T09:53:35.615257",
+  "last_updated": "2026-02-07T09:53:38.455543",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what is dharma",
+      "timestamp": "2026-02-07T09:53:38.455543",
+      "sources": [
+        {
+          "verse_id": "ch18_v31",
+          "chapter": 18,
+          "verse": 31,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया धर्ममधर्मं च कार्यं चाकार्यमेव च।अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "That by which one wrongly understands dharma and adharma, and also what ought to be done and what ought not to be done—that intellect, O Arjuna, is rajasic (passionate).",
+          "hindi": "।।18.31।।हे पार्थ ! मनुष्य जिसके द्वारा धर्म और अधर्मको, कर्तव्य और अकर्तव्यको भी ठीक तरहसे नहीं जानता, वह बुद्धि राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4579
+        },
+        {
+          "verse_id": "ch9_v3",
+          "chapter": 9,
+          "verse": 3,
+          "chapter_name": "Raja Vidya Yoga",
+          "sanskrit": "अश्रद्दधानाः पुरुषा धर्मस्यास्य परन्तप। | अप्राप्य मां निवर्तन्ते मृत्युसंसारवर्त्मनि",
+          "transliteration": "",
+          "english": "Those who have no faith in this Dharma, O Parantapa, return to the path of this world without attaining Me.",
+          "hindi": "।।9.3।। हे परंतप! इस धर्मकी महिमापर श्रद्धा न रखनेवाले मनुष्य मेरे प्राप्त न होकर मृत्युरूप संसारके मार्गमें लौटते रहते हैं अर्थात् बार-बार जन्मते-मरते रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4545
+        },
+        {
+          "verse_id": "ch4_v8",
+          "chapter": 4,
+          "verse": 8,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "परित्राणाय साधूनां विनाशाय च दुष्कृताम्। | धर्मसंस्थापनार्थाय संभवामि युगे युगे",
+          "transliteration": "",
+          "english": "For the protection of the good, for the destruction of the wicked, and for the establishment of righteousness, I am born in every age.",
+          "hindi": "।।4.8।। साधुओं-(भक्तों-) की रक्षा करनेके लिये, पापकर्म करनेवालोंका विनाश करनेके लिये और धर्मकी भलीभाँति स्थापना करनेके लिये मैं युग-युगमें प्रकट हुआ करता हूँ।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.45
+        },
+        {
+          "verse_id": "ch6_v25",
+          "chapter": 6,
+          "verse": 25,
+          "chapter_name": "Dhyana Yoga",
+          "sanskrit": "शनैः शनैरुपरमेद् बुद्ध्या धृतिगृहीतया। | आत्मसंस्थं मनः कृत्वा न किञ्चिदपि चिन्तयेत्",
+          "transliteration": "",
+          "english": "Little by little, let him attain steadiness of the intellect by holding it firmly; having made the mind establish itself in the Self, let him not think of anything else.",
+          "hindi": "।।6.25।। धैर्ययुक्त बुद्धिके द्वारा संसारसे धीरे-धीरे उपराम हो जाय और परमात्मस्वरूपमें मन-(बुद्धि-) को सम्यक् प्रकारसे स्थापन करके फिर कुछ भी चिन्तन न करे।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4458
+        },
+        {
+          "verse_id": "ch18_v34",
+          "chapter": 18,
+          "verse": 34,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "But that, O Arjuna, by which one holds fast to Dharma (duty), enjoyment of pleasures, and earning of wealth, on account of attachment and desire for reward—that firmness, O Arjuna, is Rajasic (passionate).",
+          "hindi": "।।18.34।।हे पृथानन्दन अर्जुन ! फलकी इच्छावाला मनुष्य जिस धृतिके द्वारा धर्म, काम (भोग) और अर्थको अत्यन्त आसक्तिपूर्वक धारण करता है, वह धृति राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4444
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, dharma is like a guiding light 🌟 that shows us what's right and wrong, helping us live a life of purpose and righteousness 💪. It's not just about following rules, but about living with integrity and compassion 🧘‍♂️. Remember, dharma is what helps us stay on the path of goodness and truth 🙏✨ 💫",
+      "timestamp": "2026-02-07T09:53:38.455543",
+      "sources": [
+        {
+          "verse_id": "ch18_v31",
+          "chapter": 18,
+          "verse": 31,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया धर्ममधर्मं च कार्यं चाकार्यमेव च।अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "That by which one wrongly understands dharma and adharma, and also what ought to be done and what ought not to be done—that intellect, O Arjuna, is rajasic (passionate).",
+          "hindi": "।।18.31।।हे पार्थ ! मनुष्य जिसके द्वारा धर्म और अधर्मको, कर्तव्य और अकर्तव्यको भी ठीक तरहसे नहीं जानता, वह बुद्धि राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4579
+        },
+        {
+          "verse_id": "ch9_v3",
+          "chapter": 9,
+          "verse": 3,
+          "chapter_name": "Raja Vidya Yoga",
+          "sanskrit": "अश्रद्दधानाः पुरुषा धर्मस्यास्य परन्तप। | अप्राप्य मां निवर्तन्ते मृत्युसंसारवर्त्मनि",
+          "transliteration": "",
+          "english": "Those who have no faith in this Dharma, O Parantapa, return to the path of this world without attaining Me.",
+          "hindi": "।।9.3।। हे परंतप! इस धर्मकी महिमापर श्रद्धा न रखनेवाले मनुष्य मेरे प्राप्त न होकर मृत्युरूप संसारके मार्गमें लौटते रहते हैं अर्थात् बार-बार जन्मते-मरते रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4545
+        },
+        {
+          "verse_id": "ch4_v8",
+          "chapter": 4,
+          "verse": 8,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "परित्राणाय साधूनां विनाशाय च दुष्कृताम्। | धर्मसंस्थापनार्थाय संभवामि युगे युगे",
+          "transliteration": "",
+          "english": "For the protection of the good, for the destruction of the wicked, and for the establishment of righteousness, I am born in every age.",
+          "hindi": "।।4.8।। साधुओं-(भक्तों-) की रक्षा करनेके लिये, पापकर्म करनेवालोंका विनाश करनेके लिये और धर्मकी भलीभाँति स्थापना करनेके लिये मैं युग-युगमें प्रकट हुआ करता हूँ।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.45
+        },
+        {
+          "verse_id": "ch6_v25",
+          "chapter": 6,
+          "verse": 25,
+          "chapter_name": "Dhyana Yoga",
+          "sanskrit": "शनैः शनैरुपरमेद् बुद्ध्या धृतिगृहीतया। | आत्मसंस्थं मनः कृत्वा न किञ्चिदपि चिन्तयेत्",
+          "transliteration": "",
+          "english": "Little by little, let him attain steadiness of the intellect by holding it firmly; having made the mind establish itself in the Self, let him not think of anything else.",
+          "hindi": "।।6.25।। धैर्ययुक्त बुद्धिके द्वारा संसारसे धीरे-धीरे उपराम हो जाय और परमात्मस्वरूपमें मन-(बुद्धि-) को सम्यक् प्रकारसे स्थापन करके फिर कुछ भी चिन्तन न करे।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4458
+        },
+        {
+          "verse_id": "ch18_v34",
+          "chapter": 18,
+          "verse": 34,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "But that, O Arjuna, by which one holds fast to Dharma (duty), enjoyment of pleasures, and earning of wealth, on account of attachment and desire for reward—that firmness, O Arjuna, is Rajasic (passionate).",
+          "hindi": "।।18.34।।हे पृथानन्दन अर्जुन ! फलकी इच्छावाला मनुष्य जिस धृतिके द्वारा धर्म, काम (भोग) और अर्थको अत्यन्त आसक्तिपूर्वक धारण करता है, वह धृति राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4444
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

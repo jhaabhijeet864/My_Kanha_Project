@@ -1,0 +1,22 @@
+{
+  "session_id": "e9bbbeec-c37e-4e57-aa74-cacac9a75a27",
+  "user_id": "69b8e234-f409-40d6-842d-7bcc9f757a03",
+  "created_at": "2026-02-10T16:04:13.969274",
+  "last_updated": "2026-02-10T16:04:14.988424",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "why i so greedy",
+      "timestamp": "2026-02-10T16:04:14.988424",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, greed often stems from a sense of lack or insecurity 🙏. When we focus on the present and cultivate inner peace through mindfulness 🧘‍♂️, we can begin to let go of our attachments and desires. Remember, true strength lies in self-awareness and balance 💪✨",
+      "timestamp": "2026-02-10T16:04:14.988424",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

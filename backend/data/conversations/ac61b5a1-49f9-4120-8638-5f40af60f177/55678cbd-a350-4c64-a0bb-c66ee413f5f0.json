@@ -1,0 +1,154 @@
+{
+  "session_id": "55678cbd-a350-4c64-a0bb-c66ee413f5f0",
+  "user_id": "ac61b5a1-49f9-4120-8638-5f40af60f177",
+  "created_at": "2026-02-07T09:04:22.523448",
+  "last_updated": "2026-02-07T09:04:24.421805",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "give a verses from the gita",
+      "timestamp": "2026-02-07T09:04:24.421805",
+      "sources": [
+        {
+          "verse_id": "ch4_v23",
+          "chapter": 4,
+          "verse": 23,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "गतसङ्गस्य मुक्तस्य ज्ञानावस्थितचेतसः। | यज्ञायाचरतः कर्म समग्रं प्रविलीयते",
+          "transliteration": "",
+          "english": "To one who is devoid of attachment, who is liberated, whose mind is established in knowledge, and who works for the sake of sacrifice (for the sake of God), the whole action is dissolved.",
+          "hindi": "।।4.23।। जिसकी आसक्ति सर्वथा मिट गयी है, जो मुक्त हो गया है, जिसकी बुद्धि स्वरूपके ज्ञानमें स्थित है, ऐसे केवल यज्ञके लिये कर्म करनेवाले मनुष्यके सम्पूर्ण कर्म विलीन हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5041
+        },
+        {
+          "verse_id": "ch7_v7",
+          "chapter": 7,
+          "verse": 7,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "मत्तः परतरं नान्यत्किञ्चिदस्ति धनञ्जय। | मयि सर्वमिदं प्रोतं सूत्रे मणिगणा इव",
+          "transliteration": "",
+          "english": "There is nothing higher than Me, O Arjuna. All this is strung on Me, like clusters of gems on a string.",
+          "hindi": "।।7.7।। हे धनञ्जय ! मेरे बढ़कर (इस जगत् का) दूसरा कोई किञ्चिन्मात्र भी कारण नहीं है। जैसे सूतकी मणियाँ सूतके धागेमें पिरोयी हुई होती हैं, ऐसे ही यह सम्पूर्ण जगत् मेरेमें ही ओत-प्रोत है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5002
+        },
+        {
+          "verse_id": "ch7_v20",
+          "chapter": 7,
+          "verse": 20,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "कामैस्तैस्तैर्हृतज्ञानाः प्रपद्यन्तेऽन्यदेवताः। | तं तं नियममास्थाय प्रकृत्या नियताः स्वया",
+          "transliteration": "",
+          "english": "Those whose wisdom has been taken away by this or that desire, go to other gods, following this or that rite, led by their own nature.",
+          "hindi": "।।7.20।। उन-उन कामनाओंसे जिनका ज्ञान अपहृत हो गया है, ऐसे वे मनुष्य अपनी-अपनी प्रकृतिसे नियन्त्रित होकर (देवताओंके) उन-उन नियमोंको धारण करते हुए उन-उन देवताओंके शरण हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4976
+        },
+        {
+          "verse_id": "ch4_v35",
+          "chapter": 4,
+          "verse": 35,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "यज्ज्ञात्वा न पुनर्मोहमेवं यास्यसि पाण्डव। | येन भूतान्यशेषेण द्रक्ष्यस्यात्मन्यथो मयि",
+          "transliteration": "",
+          "english": "Knowing that thou shalt not, O Arjuna, again be deluded like this; and by that thou shalt see all beings in thyself and also in me.",
+          "hindi": "।।4.35।। जिस- (तत्त्वज्ञान-) का अनुभव करनेके बाद तू फिर इस प्रकार मोहको नहीं प्राप्त होगा, और हे अर्जुन ! जिस- (तत्त्वज्ञान-) से तू सम्पूर्ण प्राणियोंको निःशेषभावसे पहले अपनेमें और उसके बाद मुझ सच्चिदानन्दघन परमात्मामें देखेगा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4945
+        },
+        {
+          "verse_id": "ch4_v21",
+          "chapter": 4,
+          "verse": 21,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "निराशीर्यतचित्तात्मा त्यक्तसर्वपरिग्रहः। | शारीरं केवलं कर्म कुर्वन्नाप्नोति किल्बिषम्",
+          "transliteration": "",
+          "english": "Without hope, controlling the mind and the self, having abandoned all covetousness, and performing only bodily actions, one incurs no sin.",
+          "hindi": "।।4.21।। जिसका शरीर और अन्तःकरण अच्छी तरहसे वशमें किया हुआ है, जिसने सब प्रकारके संग्रहका परित्याग कर दिया है, ऐसा आशारहित कर्मयोगी केवल शरीर-सम्बन्धी कर्म करता हुआ भी पापको प्राप्त नहीं होता।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4942
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, remember that all actions can be dissolved when done selflessly, with a mind established in knowledge 🧘‍♂️! I'm the ultimate reality, and everything is connected to me, like gems on a string ✨. Stay focused on the divine, and don't let desires lead you astray 💪🙏",
+      "timestamp": "2026-02-07T09:04:24.421805",
+      "sources": [
+        {
+          "verse_id": "ch4_v23",
+          "chapter": 4,
+          "verse": 23,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "गतसङ्गस्य मुक्तस्य ज्ञानावस्थितचेतसः। | यज्ञायाचरतः कर्म समग्रं प्रविलीयते",
+          "transliteration": "",
+          "english": "To one who is devoid of attachment, who is liberated, whose mind is established in knowledge, and who works for the sake of sacrifice (for the sake of God), the whole action is dissolved.",
+          "hindi": "।।4.23।। जिसकी आसक्ति सर्वथा मिट गयी है, जो मुक्त हो गया है, जिसकी बुद्धि स्वरूपके ज्ञानमें स्थित है, ऐसे केवल यज्ञके लिये कर्म करनेवाले मनुष्यके सम्पूर्ण कर्म विलीन हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5041
+        },
+        {
+          "verse_id": "ch7_v7",
+          "chapter": 7,
+          "verse": 7,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "मत्तः परतरं नान्यत्किञ्चिदस्ति धनञ्जय। | मयि सर्वमिदं प्रोतं सूत्रे मणिगणा इव",
+          "transliteration": "",
+          "english": "There is nothing higher than Me, O Arjuna. All this is strung on Me, like clusters of gems on a string.",
+          "hindi": "।।7.7।। हे धनञ्जय ! मेरे बढ़कर (इस जगत् का) दूसरा कोई किञ्चिन्मात्र भी कारण नहीं है। जैसे सूतकी मणियाँ सूतके धागेमें पिरोयी हुई होती हैं, ऐसे ही यह सम्पूर्ण जगत् मेरेमें ही ओत-प्रोत है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5002
+        },
+        {
+          "verse_id": "ch7_v20",
+          "chapter": 7,
+          "verse": 20,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "कामैस्तैस्तैर्हृतज्ञानाः प्रपद्यन्तेऽन्यदेवताः। | तं तं नियममास्थाय प्रकृत्या नियताः स्वया",
+          "transliteration": "",
+          "english": "Those whose wisdom has been taken away by this or that desire, go to other gods, following this or that rite, led by their own nature.",
+          "hindi": "।।7.20।। उन-उन कामनाओंसे जिनका ज्ञान अपहृत हो गया है, ऐसे वे मनुष्य अपनी-अपनी प्रकृतिसे नियन्त्रित होकर (देवताओंके) उन-उन नियमोंको धारण करते हुए उन-उन देवताओंके शरण हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4976
+        },
+        {
+          "verse_id": "ch4_v35",
+          "chapter": 4,
+          "verse": 35,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "यज्ज्ञात्वा न पुनर्मोहमेवं यास्यसि पाण्डव। | येन भूतान्यशेषेण द्रक्ष्यस्यात्मन्यथो मयि",
+          "transliteration": "",
+          "english": "Knowing that thou shalt not, O Arjuna, again be deluded like this; and by that thou shalt see all beings in thyself and also in me.",
+          "hindi": "।।4.35।। जिस- (तत्त्वज्ञान-) का अनुभव करनेके बाद तू फिर इस प्रकार मोहको नहीं प्राप्त होगा, और हे अर्जुन ! जिस- (तत्त्वज्ञान-) से तू सम्पूर्ण प्राणियोंको निःशेषभावसे पहले अपनेमें और उसके बाद मुझ सच्चिदानन्दघन परमात्मामें देखेगा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4945
+        },
+        {
+          "verse_id": "ch4_v21",
+          "chapter": 4,
+          "verse": 21,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "निराशीर्यतचित्तात्मा त्यक्तसर्वपरिग्रहः। | शारीरं केवलं कर्म कुर्वन्नाप्नोति किल्बिषम्",
+          "transliteration": "",
+          "english": "Without hope, controlling the mind and the self, having abandoned all covetousness, and performing only bodily actions, one incurs no sin.",
+          "hindi": "।।4.21।। जिसका शरीर और अन्तःकरण अच्छी तरहसे वशमें किया हुआ है, जिसने सब प्रकारके संग्रहका परित्याग कर दिया है, ऐसा आशारहित कर्मयोगी केवल शरीर-सम्बन्धी कर्म करता हुआ भी पापको प्राप्त नहीं होता।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4942
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

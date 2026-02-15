@@ -1,0 +1,22 @@
+{
+  "session_id": "3f650697-7d0d-44a8-9885-0701a6fc5dad",
+  "user_id": "d20834b1-5a3d-438f-ac46-837b25463d9e",
+  "created_at": "2026-02-07T09:02:54.198670",
+  "last_updated": "2026-02-07T09:02:55.120850",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hlo",
+      "timestamp": "2026-02-07T09:02:55.120850",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, friend! 😊 How's your day? I'm here to share some love and wisdom with you 🙏. May you find inner peace and strength 💪💫 🧘‍♂️💖",
+      "timestamp": "2026-02-07T09:02:55.120850",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

@@ -1,0 +1,102 @@
+{
+  "session_id": "31be4357-cc51-41b7-b733-302118bfa37c",
+  "user_id": "91e0c8af-2e14-401a-87c1-edbb30380083",
+  "created_at": "2026-02-10T16:09:58.856839",
+  "last_updated": "2026-02-10T16:10:00.400471",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What does Krishna say about karma?",
+      "timestamp": "2026-02-10T16:10:00.400471",
+      "sources": [
+        {
+          "verse_id": "ch3_v14",
+          "chapter": 3,
+          "verse": 14,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "अन्नाद्भवन्ति भूतानि पर्जन्यादन्नसम्भवः। | यज्ञाद्भवति पर्जन्यो यज्ञः कर्मसमुद्भवः",
+          "transliteration": "",
+          "english": "From food come forth beings; from rain, food is produced; from sacrifice arises rain, and sacrifice is born of action.",
+          "hindi": "।।3.14 -- 3.15।। सम्पूर्ण प्राणी अन्नसे उत्पन्न होते हैं। अन्न वर्षासे होती है। वर्षा यज्ञसे होती है। यज्ञ कर्मोंसे निष्पन्न होता है। कर्मोंको तू वेदसे उत्पन्न जान और वेदको अक्षरब्रह्मसे प्रकट हुआ जान। इसलिये वह सर्वव्यापी परमात्मा यज्ञ (कर्तव्य-कर्म) में नित्य प्रतिष्ठित है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5978
+        },
+        {
+          "verse_id": "ch3_v36",
+          "chapter": 3,
+          "verse": 36,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "अर्जुन उवाच | अथ केन प्रयुक्तोऽयं पापं चरति पूरुषः। | अनिच्छन्नपि वार्ष्णेय बलादिव नियोजितः",
+          "transliteration": "",
+          "english": "Arjuna said, \"But what compels man to commit sin, even against his wishes, O Varshneya (Krishna), as if constrained by force?\"",
+          "hindi": "।।3.36।। अर्जुन बोले - हे वार्ष्णेय ! फिर यह मनुष्य न चाहता हुआ भी जबर्दस्ती लगाये हुएकी तरह किससे प्रेरित होकर पापका आचरण करता है?",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5963
+        },
+        {
+          "verse_id": "ch3_v9",
+          "chapter": 3,
+          "verse": 9,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः। | तदर्थं कर्म कौन्तेय मुक्तसंगः समाचर",
+          "transliteration": "",
+          "english": "The world is bound by actions other than those performed for the sake of sacrifice; do thou, therefore, O son of Kunti (Arjuna), perform actions for that sake alone, free from attachment.",
+          "hindi": "।।3.9।। यज्ञ (कर्तव्यपालन) के लिये किये जानेवाले कर्मोंसे अन्यत्र (अपने लिये किये जानेवाले) कर्मोंमें लगा हुआ यह मनुष्य-समुदाय कर्मोंसे बँधता है, इसलिये हे कुन्तीनन्दन ! तू आसक्ति-रहित होकर उस यज्ञके लिये ही कर्तव्य-कर्म कर।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5946
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, karma is all about the energy we put out into the world 🌎! Our actions have consequences, and when we act selflessly, like in a sacrifice or seva, we create a positive cycle 🙏. Remember, perform your actions with detachment and for the greater good, and you'll find freedom from the karma cycle 💪🧘‍♂️✨",
+      "timestamp": "2026-02-10T16:10:00.400471",
+      "sources": [
+        {
+          "verse_id": "ch3_v14",
+          "chapter": 3,
+          "verse": 14,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "अन्नाद्भवन्ति भूतानि पर्जन्यादन्नसम्भवः। | यज्ञाद्भवति पर्जन्यो यज्ञः कर्मसमुद्भवः",
+          "transliteration": "",
+          "english": "From food come forth beings; from rain, food is produced; from sacrifice arises rain, and sacrifice is born of action.",
+          "hindi": "।।3.14 -- 3.15।। सम्पूर्ण प्राणी अन्नसे उत्पन्न होते हैं। अन्न वर्षासे होती है। वर्षा यज्ञसे होती है। यज्ञ कर्मोंसे निष्पन्न होता है। कर्मोंको तू वेदसे उत्पन्न जान और वेदको अक्षरब्रह्मसे प्रकट हुआ जान। इसलिये वह सर्वव्यापी परमात्मा यज्ञ (कर्तव्य-कर्म) में नित्य प्रतिष्ठित है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5978
+        },
+        {
+          "verse_id": "ch3_v36",
+          "chapter": 3,
+          "verse": 36,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "अर्जुन उवाच | अथ केन प्रयुक्तोऽयं पापं चरति पूरुषः। | अनिच्छन्नपि वार्ष्णेय बलादिव नियोजितः",
+          "transliteration": "",
+          "english": "Arjuna said, \"But what compels man to commit sin, even against his wishes, O Varshneya (Krishna), as if constrained by force?\"",
+          "hindi": "।।3.36।। अर्जुन बोले - हे वार्ष्णेय ! फिर यह मनुष्य न चाहता हुआ भी जबर्दस्ती लगाये हुएकी तरह किससे प्रेरित होकर पापका आचरण करता है?",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5963
+        },
+        {
+          "verse_id": "ch3_v9",
+          "chapter": 3,
+          "verse": 9,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः। | तदर्थं कर्म कौन्तेय मुक्तसंगः समाचर",
+          "transliteration": "",
+          "english": "The world is bound by actions other than those performed for the sake of sacrifice; do thou, therefore, O son of Kunti (Arjuna), perform actions for that sake alone, free from attachment.",
+          "hindi": "।।3.9।। यज्ञ (कर्तव्यपालन) के लिये किये जानेवाले कर्मोंसे अन्यत्र (अपने लिये किये जानेवाले) कर्मोंमें लगा हुआ यह मनुष्य-समुदाय कर्मोंसे बँधता है, इसलिये हे कुन्तीनन्दन ! तू आसक्ति-रहित होकर उस यज्ञके लिये ही कर्तव्य-कर्म कर।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5946
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

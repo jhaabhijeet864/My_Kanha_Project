@@ -1,0 +1,22 @@
+{
+  "session_id": "2a41bb3c-ef62-4d86-b1f1-3ca7dd554cc4",
+  "user_id": "ee419150-ccde-4558-80fb-b5efb3cdde54",
+  "created_at": "2026-02-10T17:02:45.926436",
+  "last_updated": "2026-02-10T17:02:46.990169",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what your thoughts about financial bank",
+      "timestamp": "2026-02-10T17:02:46.990169",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My dear friend, a financial bank is like a treasure chest 🏦, it's a tool to help you manage your wealth, but remember, true wealth lies within 💫. Don't get too attached to material riches, stay grounded and focused on your inner self 🧘‍♂️. May you use your wealth wisely, priya 🙏",
+      "timestamp": "2026-02-10T17:02:46.990169",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

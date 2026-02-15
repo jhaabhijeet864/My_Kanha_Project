@@ -1,0 +1,22 @@
+{
+  "session_id": "5fae0036-21f3-49c4-a5aa-640b45fad401",
+  "user_id": "00230fd4-5a08-4a49-8ba4-115e41a328f3",
+  "created_at": "2026-02-10T17:03:37.568559",
+  "last_updated": "2026-02-10T17:03:38.626627",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "why i am so greedy day by day",
+      "timestamp": "2026-02-10T17:03:38.626627",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, I totally get it - greed can be a tough one to tackle 🙏! It's like, the more we have, the more we want, right? Remember, true happiness comes from within 🧘‍♂️, so let's focus on cultivating inner peace and contentment, rather than outer desires 💪🙏✨😊",
+      "timestamp": "2026-02-10T17:03:38.626627",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

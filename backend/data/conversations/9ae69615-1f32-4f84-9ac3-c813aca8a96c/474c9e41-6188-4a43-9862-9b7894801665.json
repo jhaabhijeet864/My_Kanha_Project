@@ -1,0 +1,22 @@
+{
+  "session_id": "474c9e41-6188-4a43-9862-9b7894801665",
+  "user_id": "9ae69615-1f32-4f84-9ac3-c813aca8a96c",
+  "created_at": "2026-02-10T16:11:01.800263",
+  "last_updated": "2026-02-10T16:11:02.714234",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "why i am so greedy day by day",
+      "timestamp": "2026-02-10T16:11:02.714234",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "My dear friend, greed often stems from a sense of lack or insecurity 🙏. Recognizing this feeling and cultivating self-awareness through meditation 🧘‍♂️ can help you let go of desires and find inner peace. May you find the strength to balance your desires with wisdom 💪✨",
+      "timestamp": "2026-02-10T16:11:02.714234",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

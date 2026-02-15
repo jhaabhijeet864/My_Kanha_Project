@@ -1,0 +1,154 @@
+{
+  "session_id": "25d5da77-b382-4fd0-9882-36daa76f3b33",
+  "user_id": "5751ae4e-53d5-408f-a0c2-022586bac060",
+  "created_at": "2026-02-10T17:07:34.387314",
+  "last_updated": "2026-02-10T17:07:35.980628",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "define anger",
+      "timestamp": "2026-02-10T17:07:35.980628",
+      "sources": [
+        {
+          "verse_id": "ch3_v37",
+          "chapter": 3,
+          "verse": 37,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "श्री भगवानुवाच | काम एष क्रोध एष रजोगुणसमुद्भवः। | महाशनो महापाप्मा विद्ध्येनमिह वैरिणम्",
+          "transliteration": "",
+          "english": "The Blessed Lord said, \"It is desire and it is anger, both of the quality of Rajas, all-devouring and all-sinful; know this as the foe here in this world.\"",
+          "hindi": "।।3.37।। श्रीभगवान् बोले - रजोगुणसे उत्पन्न हुआ यह काम ही क्रोध है। यह बहुत खानेवाला और महापापी है। इस विषयमें तू इसको ही वैरी जान।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2841
+        },
+        {
+          "verse_id": "ch4_v10",
+          "chapter": 4,
+          "verse": 10,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "वीतरागभयक्रोधा मन्मया मामुपाश्रिताः। | बहवो ज्ञानतपसा पूता मद्भावमागताः",
+          "transliteration": "",
+          "english": "Freed from attachment, fear, and anger, absorbed in Me, taking refuge in Me, purified by the fire of knowledge, many have attained My Being.",
+          "hindi": "।।4.10।। राग, भय और क्रोधसे सर्वथा रहित, मेरेमें ही तल्लीन, मेरे ही आश्रित तथा ज्ञानरूप तपसे पवित्र हुए बहुत-से भक्त मेरे भाव- (स्वरूप-) को प्राप्त हो चुके हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.238
+        },
+        {
+          "verse_id": "ch16_v18",
+          "chapter": 16,
+          "verse": 18,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "अहङ्कारं बलं दर्पं कामं क्रोधं च संश्रिताः।मामात्मपरदेहेषु प्रद्विषन्तोऽभ्यसूयकाः",
+          "transliteration": "",
+          "english": "Given over to egoism, power, haughtiness, lust, and anger, these malicious people hate Me in their own bodies and in the bodies of others.",
+          "hindi": "।।16.18।।वे अहङ्कार, हठ, घमण्ड, कामना और क्रोधका आश्रय लेनेवाले मनुष्य अपने और दूसरोंके शरीरमें रहनेवाले मुझ अन्तर्यामीके साथ द्वेष करते हैं तथा (मेरे और दूसरोंके गुणोंमें) दोष-दृष्टि रखते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.233
+        },
+        {
+          "verse_id": "ch12_v15",
+          "chapter": 12,
+          "verse": 15,
+          "chapter_name": "Bhakti Yoga",
+          "sanskrit": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः",
+          "transliteration": "",
+          "english": "He whom the world does not agitate, and who cannot be agitated by the world, and who is freed from joy, anger, fear, and anxiety—he is dear to Me.",
+          "hindi": "।।12.15।।जिससे किसी प्राणीको उद्वेग नहीं होता और जिसको खुद भी किसी प्राणीसे उद्वेग नहीं होता तथा जो हर्ष, अमर्ष (ईर्ष्या), भय और उद्वेगसे रहित है, वह मुझे प्रिय है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2258
+        },
+        {
+          "verse_id": "ch5_v23",
+          "chapter": 5,
+          "verse": 23,
+          "chapter_name": "Karma Sanyasa Yoga",
+          "sanskrit": "शक्नोतीहैव यः सोढुं प्राक्शरीरविमोक्षणात्। | कामक्रोधोद्भवं वेगं स युक्तः स सुखी नरः",
+          "transliteration": "",
+          "english": "He who is able, while still here in this world, to withstand the impulse born out of desire and anger before the liberation from the body, he is a Yogi, and he is a happy man.",
+          "hindi": "।।5.23।। इस मनुष्य-शरीरमें जो कोई (मनुष्य) शरीर छूटनेसे पहले ही काम-क्रोधसे उत्पन्न होनेवाले वेगको सहन करनेमें समर्थ होता है, वह नर योगी है और वही सुखी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2138
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, anger is like a fire that consumes us, driven by desire and ego 🙏. It's a foe that can lead us astray, but recognizing it is the first step to freedom 🧘‍♂️. Let's cultivate self-awareness and calmness to rise above it, and find inner peace 💪✨",
+      "timestamp": "2026-02-10T17:07:35.980628",
+      "sources": [
+        {
+          "verse_id": "ch3_v37",
+          "chapter": 3,
+          "verse": 37,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "श्री भगवानुवाच | काम एष क्रोध एष रजोगुणसमुद्भवः। | महाशनो महापाप्मा विद्ध्येनमिह वैरिणम्",
+          "transliteration": "",
+          "english": "The Blessed Lord said, \"It is desire and it is anger, both of the quality of Rajas, all-devouring and all-sinful; know this as the foe here in this world.\"",
+          "hindi": "।।3.37।। श्रीभगवान् बोले - रजोगुणसे उत्पन्न हुआ यह काम ही क्रोध है। यह बहुत खानेवाला और महापापी है। इस विषयमें तू इसको ही वैरी जान।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2841
+        },
+        {
+          "verse_id": "ch4_v10",
+          "chapter": 4,
+          "verse": 10,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "वीतरागभयक्रोधा मन्मया मामुपाश्रिताः। | बहवो ज्ञानतपसा पूता मद्भावमागताः",
+          "transliteration": "",
+          "english": "Freed from attachment, fear, and anger, absorbed in Me, taking refuge in Me, purified by the fire of knowledge, many have attained My Being.",
+          "hindi": "।।4.10।। राग, भय और क्रोधसे सर्वथा रहित, मेरेमें ही तल्लीन, मेरे ही आश्रित तथा ज्ञानरूप तपसे पवित्र हुए बहुत-से भक्त मेरे भाव- (स्वरूप-) को प्राप्त हो चुके हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.238
+        },
+        {
+          "verse_id": "ch16_v18",
+          "chapter": 16,
+          "verse": 18,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "अहङ्कारं बलं दर्पं कामं क्रोधं च संश्रिताः।मामात्मपरदेहेषु प्रद्विषन्तोऽभ्यसूयकाः",
+          "transliteration": "",
+          "english": "Given over to egoism, power, haughtiness, lust, and anger, these malicious people hate Me in their own bodies and in the bodies of others.",
+          "hindi": "।।16.18।।वे अहङ्कार, हठ, घमण्ड, कामना और क्रोधका आश्रय लेनेवाले मनुष्य अपने और दूसरोंके शरीरमें रहनेवाले मुझ अन्तर्यामीके साथ द्वेष करते हैं तथा (मेरे और दूसरोंके गुणोंमें) दोष-दृष्टि रखते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.233
+        },
+        {
+          "verse_id": "ch12_v15",
+          "chapter": 12,
+          "verse": 15,
+          "chapter_name": "Bhakti Yoga",
+          "sanskrit": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः",
+          "transliteration": "",
+          "english": "He whom the world does not agitate, and who cannot be agitated by the world, and who is freed from joy, anger, fear, and anxiety—he is dear to Me.",
+          "hindi": "।।12.15।।जिससे किसी प्राणीको उद्वेग नहीं होता और जिसको खुद भी किसी प्राणीसे उद्वेग नहीं होता तथा जो हर्ष, अमर्ष (ईर्ष्या), भय और उद्वेगसे रहित है, वह मुझे प्रिय है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2258
+        },
+        {
+          "verse_id": "ch5_v23",
+          "chapter": 5,
+          "verse": 23,
+          "chapter_name": "Karma Sanyasa Yoga",
+          "sanskrit": "शक्नोतीहैव यः सोढुं प्राक्शरीरविमोक्षणात्। | कामक्रोधोद्भवं वेगं स युक्तः स सुखी नरः",
+          "transliteration": "",
+          "english": "He who is able, while still here in this world, to withstand the impulse born out of desire and anger before the liberation from the body, he is a Yogi, and he is a happy man.",
+          "hindi": "।।5.23।। इस मनुष्य-शरीरमें जो कोई (मनुष्य) शरीर छूटनेसे पहले ही काम-क्रोधसे उत्पन्न होनेवाले वेगको सहन करनेमें समर्थ होता है, वह नर योगी है और वही सुखी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2138
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

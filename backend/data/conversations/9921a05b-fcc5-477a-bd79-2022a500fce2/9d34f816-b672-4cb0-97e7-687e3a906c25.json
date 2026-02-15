@@ -1,0 +1,22 @@
+{
+  "session_id": "9d34f816-b672-4cb0-97e7-687e3a906c25",
+  "user_id": "9921a05b-fcc5-477a-bd79-2022a500fce2",
+  "created_at": "2026-02-07T09:01:18.976554",
+  "last_updated": "2026-02-07T09:01:20.145185",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what is life",
+      "timestamp": "2026-02-07T09:01:20.145185",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, life is a beautiful journey of self-discovery 🙏! It's about finding your true purpose and living in the present moment, letting go of attachments and desires 🧘‍♂️. Remember, you have the power to create your own destiny, so stay strong and focused 💪✨! 🙏",
+      "timestamp": "2026-02-07T09:01:20.145185",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

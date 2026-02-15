@@ -12,6 +12,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	<meta name="apple-mobile-web-app-title" content="My Kanha">
 	<link rel="apple-touch-icon" href="assets/images/icon-192.png">
+	<link rel="icon" type="image/png" href="assets/images/icon-192.png">
 	<meta name="description" content="Customize your My Kanha experience">
 	<script src="assets/js/config.js"></script>
 </head>
@@ -31,11 +32,11 @@
 			<h2>My Profile</h2>
 			<div class="profile-container">
 				<div class="profile-header">
-					<img id="profileAvatar" src="assets/images/default-avatar.png" alt="Profile Avatar" class="profile-avatar">
+					<img id="profileAvatar" src="assets/images/default_profile.svg" alt="Profile Avatar" class="profile-avatar">
 					<div class="profile-info">
-						<h3 id="profileName">Loading...</h3>
-						<p id="profileEmail" class="profile-email">Loading...</p>
-						<p id="profilePhone" class="profile-phone">Loading...</p>
+						<h3 id="profileName">User XYZ</h3>
+						<p id="profileEmail" class="profile-email">xyz@gmail.com</p>
+						<p id="profilePhone" class="profile-phone">987654321</p>
 					</div>
 				</div>
 				<div class="profile-details">
@@ -51,10 +52,7 @@
 						<span class="detail-label">Phone:</span>
 						<span id="detailPhone" class="detail-value">--</span>
 					</div>
-					<div class="detail-item">
-						<span class="detail-label">Member Since:</span>
-						<span id="detailJoinDate" class="detail-value">--</span>
-					</div>
+					
 				</div>
 				<div class="profile-actions">
 					<button type="button" class="edit-btn" onclick="openProfileModal()">View Details</button>
@@ -93,7 +91,7 @@
 				<!-- Existing Settings -->
 				<div class="form-group">
 					<label for="language">Language</label>
-					<select id="language" name="language" disabled>
+					<select id="language" name="language">
 						<option value="en">English</option>
 						<option value="hi">Hindi</option>
 					</select>
@@ -152,7 +150,7 @@
 			<div class="modal-body">
 				<div class="modal-profile-section">
 					<div class="modal-avatar-container">
-						<img id="modalProfileAvatar" src="assets/images/default-avatar.png" alt="Profile" class="modal-avatar">
+						<img id="modalProfileAvatar" src="assets/images/default_profile.svg" alt="Profile" class="modal-avatar">
 					</div>
 					<h3 id="modalProfileName">Loading...</h3>
 					<p id="modalProfileEmail" class="modal-subtitle">Loading...</p>

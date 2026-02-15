@@ -1,0 +1,22 @@
+{
+  "session_id": "0383a237-8d5e-474f-b4e8-2410d44f02d4",
+  "user_id": "1b4310e5-f882-489e-b34f-06b555bfe57c",
+  "created_at": "2026-02-10T16:21:08.439857",
+  "last_updated": "2026-02-10T16:21:09.235325",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hlo",
+      "timestamp": "2026-02-10T16:21:09.235325",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, friend! 😊 How's your day going so far? May it be filled with love, light, and positivity ✨💛🙏",
+      "timestamp": "2026-02-10T16:21:09.235325",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

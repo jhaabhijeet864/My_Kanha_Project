@@ -1,0 +1,154 @@
+{
+  "session_id": "d9787089-ac5e-416e-b5e0-eb60d479eccf",
+  "user_id": "22ede82d-ffba-4c7b-8364-08396b743640",
+  "created_at": "2026-02-07T09:01:52.893444",
+  "last_updated": "2026-02-07T09:01:55.743589",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "give a verses from geeta",
+      "timestamp": "2026-02-07T09:01:55.743589",
+      "sources": [
+        {
+          "verse_id": "ch7_v20",
+          "chapter": 7,
+          "verse": 20,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "कामैस्तैस्तैर्हृतज्ञानाः प्रपद्यन्तेऽन्यदेवताः। | तं तं नियममास्थाय प्रकृत्या नियताः स्वया",
+          "transliteration": "",
+          "english": "Those whose wisdom has been taken away by this or that desire, go to other gods, following this or that rite, led by their own nature.",
+          "hindi": "।।7.20।। उन-उन कामनाओंसे जिनका ज्ञान अपहृत हो गया है, ऐसे वे मनुष्य अपनी-अपनी प्रकृतिसे नियन्त्रित होकर (देवताओंके) उन-उन नियमोंको धारण करते हुए उन-उन देवताओंके शरण हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4795
+        },
+        {
+          "verse_id": "ch4_v35",
+          "chapter": 4,
+          "verse": 35,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "यज्ज्ञात्वा न पुनर्मोहमेवं यास्यसि पाण्डव। | येन भूतान्यशेषेण द्रक्ष्यस्यात्मन्यथो मयि",
+          "transliteration": "",
+          "english": "Knowing that thou shalt not, O Arjuna, again be deluded like this; and by that thou shalt see all beings in thyself and also in me.",
+          "hindi": "।।4.35।। जिस- (तत्त्वज्ञान-) का अनुभव करनेके बाद तू फिर इस प्रकार मोहको नहीं प्राप्त होगा, और हे अर्जुन ! जिस- (तत्त्वज्ञान-) से तू सम्पूर्ण प्राणियोंको निःशेषभावसे पहले अपनेमें और उसके बाद मुझ सच्चिदानन्दघन परमात्मामें देखेगा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4793
+        },
+        {
+          "verse_id": "ch7_v4",
+          "chapter": 7,
+          "verse": 4,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "भूमिरापोऽनलो वायुः खं मनो बुद्धिरेव च। | अहङ्कार इतीयं मे भिन्ना प्रकृतिरष्टधा",
+          "transliteration": "",
+          "english": "Earth, water, fire, air, ether, mind, intellect, and egoism—thus is My Nature divided eightfold.",
+          "hindi": "।।7.4 -- 7.5।। पृथ्वी, जल, तेज, वायु, आकाश -- ये पञ्चमहाभूत और मन, बुद्धि तथा अहंकार -- यह आठ प्रकारके भेदोंवाली मेरी 'अपरा' प्रकृति है। हे महाबाहो ! इस अपरा प्रकृतिसे भिन्न जीवरूप बनी हुई मेरी 'परा' प्रकृतिको जान, जिसके द्वारा यह जगत् धारण किया जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4552
+        },
+        {
+          "verse_id": "ch9_v21",
+          "chapter": 9,
+          "verse": 21,
+          "chapter_name": "Raja Vidya Yoga",
+          "sanskrit": "ते तं भुक्त्वा स्वर्गलोकं विशालं | क्षीणे पुण्ये मर्त्यलोकं विशन्ति। | एव त्रयीधर्ममनुप्रपन्ना | गतागतं कामकामा लभन्ते",
+          "transliteration": "",
+          "english": "They, having enjoyed the vast heaven, enter the world of mortals when their merit is exhausted; thus abiding by the injunctions of the three (Vedas) and desiring objects of desires, they attain to the state of coming and going.",
+          "hindi": "।।9.21।। वे उस विशाल स्वर्गलोकके भोगोंको भोगकर पुण्य क्षीण होनेपर मृत्युलोकमें आ जाते हैं। इस प्रकार तीनों वेदोंमें कहे हुए सकाम धर्मका आश्रय लिये हुए भोगोंकी कामना करनेवाले मनुष्य आवागमनको प्राप्त होते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4511
+        },
+        {
+          "verse_id": "ch4_v21",
+          "chapter": 4,
+          "verse": 21,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "निराशीर्यतचित्तात्मा त्यक्तसर्वपरिग्रहः। | शारीरं केवलं कर्म कुर्वन्नाप्नोति किल्बिषम्",
+          "transliteration": "",
+          "english": "Without hope, controlling the mind and the self, having abandoned all covetousness, and performing only bodily actions, one incurs no sin.",
+          "hindi": "।।4.21।। जिसका शरीर और अन्तःकरण अच्छी तरहसे वशमें किया हुआ है, जिसने सब प्रकारके संग्रहका परित्याग कर दिया है, ऐसा आशारहित कर्मयोगी केवल शरीर-सम्बन्धी कर्म करता हुआ भी पापको प्राप्त नहीं होता।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4454
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, let's keep it simple and focus on the wisdom within 🙏! Remember, desires can distract us from our true path, so stay grounded and see all beings in yourself and in me 💪. May you find your inner peace 🧘‍♂️💫",
+      "timestamp": "2026-02-07T09:01:55.743589",
+      "sources": [
+        {
+          "verse_id": "ch7_v20",
+          "chapter": 7,
+          "verse": 20,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "कामैस्तैस्तैर्हृतज्ञानाः प्रपद्यन्तेऽन्यदेवताः। | तं तं नियममास्थाय प्रकृत्या नियताः स्वया",
+          "transliteration": "",
+          "english": "Those whose wisdom has been taken away by this or that desire, go to other gods, following this or that rite, led by their own nature.",
+          "hindi": "।।7.20।। उन-उन कामनाओंसे जिनका ज्ञान अपहृत हो गया है, ऐसे वे मनुष्य अपनी-अपनी प्रकृतिसे नियन्त्रित होकर (देवताओंके) उन-उन नियमोंको धारण करते हुए उन-उन देवताओंके शरण हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4795
+        },
+        {
+          "verse_id": "ch4_v35",
+          "chapter": 4,
+          "verse": 35,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "यज्ज्ञात्वा न पुनर्मोहमेवं यास्यसि पाण्डव। | येन भूतान्यशेषेण द्रक्ष्यस्यात्मन्यथो मयि",
+          "transliteration": "",
+          "english": "Knowing that thou shalt not, O Arjuna, again be deluded like this; and by that thou shalt see all beings in thyself and also in me.",
+          "hindi": "।।4.35।। जिस- (तत्त्वज्ञान-) का अनुभव करनेके बाद तू फिर इस प्रकार मोहको नहीं प्राप्त होगा, और हे अर्जुन ! जिस- (तत्त्वज्ञान-) से तू सम्पूर्ण प्राणियोंको निःशेषभावसे पहले अपनेमें और उसके बाद मुझ सच्चिदानन्दघन परमात्मामें देखेगा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4793
+        },
+        {
+          "verse_id": "ch7_v4",
+          "chapter": 7,
+          "verse": 4,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "भूमिरापोऽनलो वायुः खं मनो बुद्धिरेव च। | अहङ्कार इतीयं मे भिन्ना प्रकृतिरष्टधा",
+          "transliteration": "",
+          "english": "Earth, water, fire, air, ether, mind, intellect, and egoism—thus is My Nature divided eightfold.",
+          "hindi": "।।7.4 -- 7.5।। पृथ्वी, जल, तेज, वायु, आकाश -- ये पञ्चमहाभूत और मन, बुद्धि तथा अहंकार -- यह आठ प्रकारके भेदोंवाली मेरी 'अपरा' प्रकृति है। हे महाबाहो ! इस अपरा प्रकृतिसे भिन्न जीवरूप बनी हुई मेरी 'परा' प्रकृतिको जान, जिसके द्वारा यह जगत् धारण किया जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4552
+        },
+        {
+          "verse_id": "ch9_v21",
+          "chapter": 9,
+          "verse": 21,
+          "chapter_name": "Raja Vidya Yoga",
+          "sanskrit": "ते तं भुक्त्वा स्वर्गलोकं विशालं | क्षीणे पुण्ये मर्त्यलोकं विशन्ति। | एव त्रयीधर्ममनुप्रपन्ना | गतागतं कामकामा लभन्ते",
+          "transliteration": "",
+          "english": "They, having enjoyed the vast heaven, enter the world of mortals when their merit is exhausted; thus abiding by the injunctions of the three (Vedas) and desiring objects of desires, they attain to the state of coming and going.",
+          "hindi": "।।9.21।। वे उस विशाल स्वर्गलोकके भोगोंको भोगकर पुण्य क्षीण होनेपर मृत्युलोकमें आ जाते हैं। इस प्रकार तीनों वेदोंमें कहे हुए सकाम धर्मका आश्रय लिये हुए भोगोंकी कामना करनेवाले मनुष्य आवागमनको प्राप्त होते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4511
+        },
+        {
+          "verse_id": "ch4_v21",
+          "chapter": 4,
+          "verse": 21,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "निराशीर्यतचित्तात्मा त्यक्तसर्वपरिग्रहः। | शारीरं केवलं कर्म कुर्वन्नाप्नोति किल्बिषम्",
+          "transliteration": "",
+          "english": "Without hope, controlling the mind and the self, having abandoned all covetousness, and performing only bodily actions, one incurs no sin.",
+          "hindi": "।।4.21।। जिसका शरीर और अन्तःकरण अच्छी तरहसे वशमें किया हुआ है, जिसने सब प्रकारके संग्रहका परित्याग कर दिया है, ऐसा आशारहित कर्मयोगी केवल शरीर-सम्बन्धी कर्म करता हुआ भी पापको प्राप्त नहीं होता।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4454
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

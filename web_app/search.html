@@ -12,6 +12,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="My Kanha">
   <link rel="apple-touch-icon" href="assets/images/icon-192.png">
+  <link rel="icon" type="image/png" href="assets/images/icon-192.png">
   <meta name="description" content="Search Bhagavad Gita verses and spiritual knowledge">
   <script src="assets/js/config.js"></script>
 </head>
@@ -29,11 +30,11 @@
     <section class="search-section">
       <h2>Search Verses & Knowledge</h2>
       <form class="search-form">
-        <input type="text" class="search-input" placeholder="Search for verses, topics, or keywords..." autocomplete="off" disabled>
-        <button type="submit" class="search-btn" disabled>Search</button>
+        <input type="text" id="search-input" class="search-input" placeholder="Search for verses, topics, or keywords..." autocomplete="off">
+        <button type="button" id="search-btn" class="search-btn">Search</button>
       </form>
       <div class="search-results">
-        <!-- Search results will appear here -->
+        <div id="search-results"></div>
       </div>
     </section>
   </main>

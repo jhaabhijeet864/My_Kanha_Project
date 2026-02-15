@@ -1,0 +1,22 @@
+{
+  "session_id": "da555603-8c3f-48fe-9cdb-b312ccbe4e20",
+  "user_id": "43cf99c7-32aa-485b-99a8-7b0d827b5a4e",
+  "created_at": "2026-02-07T10:30:24.377545",
+  "last_updated": "2026-02-07T10:30:24.865760",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi",
+      "timestamp": "2026-02-07T10:30:24.865760",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, priya! 😊 How's your day going so far? 😃",
+      "timestamp": "2026-02-07T10:30:24.865760",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

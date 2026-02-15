@@ -1,0 +1,154 @@
+{
+  "session_id": "7b29d356-b58a-4a3f-be14-476e3bca96c0",
+  "user_id": "45ad56bb-c286-4581-8efb-918c1f81daa0",
+  "created_at": "2026-02-07T10:31:02.345150",
+  "last_updated": "2026-02-07T10:31:03.431863",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "why am i soo greedy",
+      "timestamp": "2026-02-07T10:31:03.431863",
+      "sources": [
+        {
+          "verse_id": "ch16_v15",
+          "chapter": 16,
+          "verse": 15,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आढ्योऽभिजनवानस्मि कोऽन्योऽस्ति सदृशो मया।यक्ष्ये दास्यामि मोदिष्य इत्यज्ञानविमोहिताः",
+          "transliteration": "",
+          "english": "\"I am wealthy and born into a noble family. Who is my equal? I shall perform sacrifices, give charity, and rejoice,\" thus deluded by ignorance.",
+          "hindi": "।।16.15।।हम धनवान् हैं, बहुत-से मनुष्य हमारे पास हैं, हमारे समान और कौन है? हम खूब यज्ञ करेंगे, दान देंगे और मौज करेंगे -- इस तरह वे अज्ञानसे मोहित रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2356
+        },
+        {
+          "verse_id": "ch17_v21",
+          "chapter": 17,
+          "verse": 21,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः।दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम्",
+          "transliteration": "",
+          "english": "And, that gift which is given with the intention of receiving something in return, or expecting a reward, or begrudgingly, is considered to be Rajasic.",
+          "hindi": "।।17.21।।किन्तु जो दान प्रत्युपकारके लिये अथवा फलप्राप्तिका उद्देश्य बनाकर फिर क्लेशपूर्वक दिया जाता है, वह दान राजस कहा जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2224
+        },
+        {
+          "verse_id": "ch3_v13",
+          "chapter": 3,
+          "verse": 13,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः। | भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्",
+          "transliteration": "",
+          "english": "The righteous who eat the remnants of the sacrifice are freed from all sins; but those sinful ones who cook food solely for their own sake indeed consume sin.",
+          "hindi": "।।3.13।। यज्ञशेष- (योग-) का अनुभव करनेवाले श्रेष्ठ मनुष्य सम्पूर्ण पापोंसे मुक्त हो जाते हैं। परन्तु जो केवल अपने लिये ही पकाते अर्थात् सब कर्म करते हैं, वे पापीलोग तो पापका ही भक्षण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2078
+        },
+        {
+          "verse_id": "ch16_v12",
+          "chapter": 16,
+          "verse": 12,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आशापाशशतैर्बद्धाः कामक्रोधपरायणाः।ईहन्ते कामभोगार्थमन्यायेनार्थसञ्चयान्",
+          "transliteration": "",
+          "english": "Bound by a hundred ties of hope, given over to lust and anger, they strive to obtain hoards of wealth by unlawful means for sensual enjoyment.",
+          "hindi": "।।16.12।।वे आशाकी सैकड़ों फाँसियोंसे बँधे हुए मनुष्य काम-क्रोधके परायण होकर पदार्थोंका भोग करनेके लिये अन्यायपूर्वक धन-संचय करनेकी चेष्टा करते रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2058
+        },
+        {
+          "verse_id": "ch18_v34",
+          "chapter": 18,
+          "verse": 34,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "But that, O Arjuna, by which one holds fast to Dharma (duty), enjoyment of pleasures, and earning of wealth, on account of attachment and desire for reward—that firmness, O Arjuna, is Rajasic (passionate).",
+          "hindi": "।।18.34।।हे पृथानन्दन अर्जुन ! फलकी इच्छावाला मनुष्य जिस धृतिके द्वारा धर्म, काम (भोग) और अर्थको अत्यन्त आसक्तिपूर्वक धारण करता है, वह धृति राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2025
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, let's be honest, we all have a bit of greed in us 🙏. It's like I always say, when we're deluded by our own ego and desires, we start to think we need more and more to be happy, but that's just an illusion ✨. Let's work on letting go and finding inner peace through self-reflection and mindfulness 🧘‍♂️💫😊",
+      "timestamp": "2026-02-07T10:31:03.431863",
+      "sources": [
+        {
+          "verse_id": "ch16_v15",
+          "chapter": 16,
+          "verse": 15,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आढ्योऽभिजनवानस्मि कोऽन्योऽस्ति सदृशो मया।यक्ष्ये दास्यामि मोदिष्य इत्यज्ञानविमोहिताः",
+          "transliteration": "",
+          "english": "\"I am wealthy and born into a noble family. Who is my equal? I shall perform sacrifices, give charity, and rejoice,\" thus deluded by ignorance.",
+          "hindi": "।।16.15।।हम धनवान् हैं, बहुत-से मनुष्य हमारे पास हैं, हमारे समान और कौन है? हम खूब यज्ञ करेंगे, दान देंगे और मौज करेंगे -- इस तरह वे अज्ञानसे मोहित रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2356
+        },
+        {
+          "verse_id": "ch17_v21",
+          "chapter": 17,
+          "verse": 21,
+          "chapter_name": "Sraddhatraya Vibhaga Yoga",
+          "sanskrit": "यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः।दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम्",
+          "transliteration": "",
+          "english": "And, that gift which is given with the intention of receiving something in return, or expecting a reward, or begrudgingly, is considered to be Rajasic.",
+          "hindi": "।।17.21।।किन्तु जो दान प्रत्युपकारके लिये अथवा फलप्राप्तिका उद्देश्य बनाकर फिर क्लेशपूर्वक दिया जाता है, वह दान राजस कहा जाता है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2224
+        },
+        {
+          "verse_id": "ch3_v13",
+          "chapter": 3,
+          "verse": 13,
+          "chapter_name": "Karma Yoga",
+          "sanskrit": "यज्ञशिष्टाशिनः सन्तो मुच्यन्ते सर्वकिल्बिषैः। | भुञ्जते ते त्वघं पापा ये पचन्त्यात्मकारणात्",
+          "transliteration": "",
+          "english": "The righteous who eat the remnants of the sacrifice are freed from all sins; but those sinful ones who cook food solely for their own sake indeed consume sin.",
+          "hindi": "।।3.13।। यज्ञशेष- (योग-) का अनुभव करनेवाले श्रेष्ठ मनुष्य सम्पूर्ण पापोंसे मुक्त हो जाते हैं। परन्तु जो केवल अपने लिये ही पकाते अर्थात् सब कर्म करते हैं, वे पापीलोग तो पापका ही भक्षण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2078
+        },
+        {
+          "verse_id": "ch16_v12",
+          "chapter": 16,
+          "verse": 12,
+          "chapter_name": "Daivasura Sampad Vibhaga Yoga",
+          "sanskrit": "आशापाशशतैर्बद्धाः कामक्रोधपरायणाः।ईहन्ते कामभोगार्थमन्यायेनार्थसञ्चयान्",
+          "transliteration": "",
+          "english": "Bound by a hundred ties of hope, given over to lust and anger, they strive to obtain hoards of wealth by unlawful means for sensual enjoyment.",
+          "hindi": "।।16.12।।वे आशाकी सैकड़ों फाँसियोंसे बँधे हुए मनुष्य काम-क्रोधके परायण होकर पदार्थोंका भोग करनेके लिये अन्यायपूर्वक धन-संचय करनेकी चेष्टा करते रहते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2058
+        },
+        {
+          "verse_id": "ch18_v34",
+          "chapter": 18,
+          "verse": 34,
+          "chapter_name": "Moksha Sanyaas Yoga",
+          "sanskrit": "यया तु धर्मकामार्थान् धृत्या धारयतेऽर्जुन।प्रसङ्गेन फलाकाङ्क्षी धृतिः सा पार्थ राजसी",
+          "transliteration": "",
+          "english": "But that, O Arjuna, by which one holds fast to Dharma (duty), enjoyment of pleasures, and earning of wealth, on account of attachment and desire for reward—that firmness, O Arjuna, is Rajasic (passionate).",
+          "hindi": "।।18.34।।हे पृथानन्दन अर्जुन ! फलकी इच्छावाला मनुष्य जिस धृतिके द्वारा धर्म, काम (भोग) और अर्थको अत्यन्त आसक्तिपूर्वक धारण करता है, वह धृति राजसी है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.2025
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

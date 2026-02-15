@@ -1,0 +1,102 @@
+{
+  "session_id": "46e78447-112c-4b51-9368-badb4c5d5f68",
+  "user_id": "c7f93740-9f15-42ca-8569-29769a548049",
+  "created_at": "2026-02-07T09:24:21.281423",
+  "last_updated": "2026-02-07T09:24:24.136282",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "give verses from gita",
+      "timestamp": "2026-02-07T09:24:24.136282",
+      "sources": [
+        {
+          "verse_id": "ch4_v23",
+          "chapter": 4,
+          "verse": 23,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "गतसङ्गस्य मुक्तस्य ज्ञानावस्थितचेतसः। | यज्ञायाचरतः कर्म समग्रं प्रविलीयते",
+          "transliteration": "",
+          "english": "To one who is devoid of attachment, who is liberated, whose mind is established in knowledge, and who works for the sake of sacrifice (for the sake of God), the whole action is dissolved.",
+          "hindi": "।।4.23।। जिसकी आसक्ति सर्वथा मिट गयी है, जो मुक्त हो गया है, जिसकी बुद्धि स्वरूपके ज्ञानमें स्थित है, ऐसे केवल यज्ञके लिये कर्म करनेवाले मनुष्यके सम्पूर्ण कर्म विलीन हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5082
+        },
+        {
+          "verse_id": "ch7_v7",
+          "chapter": 7,
+          "verse": 7,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "मत्तः परतरं नान्यत्किञ्चिदस्ति धनञ्जय। | मयि सर्वमिदं प्रोतं सूत्रे मणिगणा इव",
+          "transliteration": "",
+          "english": "There is nothing higher than Me, O Arjuna. All this is strung on Me, like clusters of gems on a string.",
+          "hindi": "।।7.7।। हे धनञ्जय ! मेरे बढ़कर (इस जगत् का) दूसरा कोई किञ्चिन्मात्र भी कारण नहीं है। जैसे सूतकी मणियाँ सूतके धागेमें पिरोयी हुई होती हैं, ऐसे ही यह सम्पूर्ण जगत् मेरेमें ही ओत-प्रोत है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4973
+        },
+        {
+          "verse_id": "ch4_v11",
+          "chapter": 4,
+          "verse": 11,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "ये यथा मां प्रपद्यन्ते तांस्तथैव भजाम्यहम्। | मम वर्त्मानुवर्तन्ते मनुष्याः पार्थ सर्वशः",
+          "transliteration": "",
+          "english": "In whatever way men approach Me, even so do I reward them; My path do men tread in all ways, O Arjuna.",
+          "hindi": "।।4.11।। हे पृथानन्दन ! जो भक्त जिस प्रकार मेरी शरण लेते हैं, मैं उन्हें उसी प्रकार आश्रय देता हूँ; क्योंकि सभी मनुष्य सब प्रकारसे मेरे मार्गका अनुकरण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4938
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, let's keep it simple 🙏! When you work selflessly, without attachment, your actions become a sacrifice to the divine, and that's true liberation 💪. Just remember, I'm the string that connects all the gems, and I reward you in the same way you approach me 🧘‍♂️✨! 😊",
+      "timestamp": "2026-02-07T09:24:24.136282",
+      "sources": [
+        {
+          "verse_id": "ch4_v23",
+          "chapter": 4,
+          "verse": 23,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "गतसङ्गस्य मुक्तस्य ज्ञानावस्थितचेतसः। | यज्ञायाचरतः कर्म समग्रं प्रविलीयते",
+          "transliteration": "",
+          "english": "To one who is devoid of attachment, who is liberated, whose mind is established in knowledge, and who works for the sake of sacrifice (for the sake of God), the whole action is dissolved.",
+          "hindi": "।।4.23।। जिसकी आसक्ति सर्वथा मिट गयी है, जो मुक्त हो गया है, जिसकी बुद्धि स्वरूपके ज्ञानमें स्थित है, ऐसे केवल यज्ञके लिये कर्म करनेवाले मनुष्यके सम्पूर्ण कर्म विलीन हो जाते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.5082
+        },
+        {
+          "verse_id": "ch7_v7",
+          "chapter": 7,
+          "verse": 7,
+          "chapter_name": "Gyaan Vigyana Yoga",
+          "sanskrit": "मत्तः परतरं नान्यत्किञ्चिदस्ति धनञ्जय। | मयि सर्वमिदं प्रोतं सूत्रे मणिगणा इव",
+          "transliteration": "",
+          "english": "There is nothing higher than Me, O Arjuna. All this is strung on Me, like clusters of gems on a string.",
+          "hindi": "।।7.7।। हे धनञ्जय ! मेरे बढ़कर (इस जगत् का) दूसरा कोई किञ्चिन्मात्र भी कारण नहीं है। जैसे सूतकी मणियाँ सूतके धागेमें पिरोयी हुई होती हैं, ऐसे ही यह सम्पूर्ण जगत् मेरेमें ही ओत-प्रोत है।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4973
+        },
+        {
+          "verse_id": "ch4_v11",
+          "chapter": 4,
+          "verse": 11,
+          "chapter_name": "Jnana Karma Sanyasa Yoga",
+          "sanskrit": "ये यथा मां प्रपद्यन्ते तांस्तथैव भजाम्यहम्। | मम वर्त्मानुवर्तन्ते मनुष्याः पार्थ सर्वशः",
+          "transliteration": "",
+          "english": "In whatever way men approach Me, even so do I reward them; My path do men tread in all ways, O Arjuna.",
+          "hindi": "।।4.11।। हे पृथानन्दन ! जो भक्त जिस प्रकार मेरी शरण लेते हैं, मैं उन्हें उसी प्रकार आश्रय देता हूँ; क्योंकि सभी मनुष्य सब प्रकारसे मेरे मार्गका अनुकरण करते हैं।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4938
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

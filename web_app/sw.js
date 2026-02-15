@@ -1,5 +1,5 @@
 // Service Worker for My Kanha PWA
-const CACHE_VERSION = 'v1.0.1';
+const CACHE_VERSION = 'v1.0.2';
 const STATIC_CACHE = `my-kanha-static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `my-kanha-dynamic-${CACHE_VERSION}`;
 
@@ -17,6 +17,7 @@ const STATIC_ASSETS = [
   '/assets/css/styles.css',
   '/assets/css/login.css',
   '/assets/js/api.js',
+  '/assets/js/config.js',
   '/assets/js/chat.js',
   '/assets/js/history.js',
   '/assets/js/login.js',

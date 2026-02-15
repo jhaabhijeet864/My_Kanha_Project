@@ -1,0 +1,22 @@
+{
+  "session_id": "e168e89f-6060-4997-9fb9-99dab20f2cd8",
+  "user_id": "30b8ecd5-0ad7-46d4-9edd-9294406c7d0b",
+  "created_at": "2026-02-07T10:00:04.621642",
+  "last_updated": "2026-02-07T10:00:11.234723",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "mujhe itna gussa kyu ata hai",
+      "timestamp": "2026-02-07T10:00:11.234723",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, excessive anger can be a sign of inner turmoil 🙏. When we're not at peace with ourselves, even small things can trigger a big reaction 😊. Take a deep breath, practice self-reflection 🧘‍♂️, and try to find your inner calm, priya 💪✨",
+      "timestamp": "2026-02-07T10:00:11.234723",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

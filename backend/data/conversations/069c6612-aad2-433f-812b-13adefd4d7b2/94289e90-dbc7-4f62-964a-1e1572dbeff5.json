@@ -1,0 +1,154 @@
+{
+  "session_id": "94289e90-dbc7-4f62-964a-1e1572dbeff5",
+  "user_id": "069c6612-aad2-433f-812b-13adefd4d7b2",
+  "created_at": "2026-02-10T16:21:31.121989",
+  "last_updated": "2026-02-10T16:21:32.721929",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello, can you give me arjuna shlokas from geeta",
+      "timestamp": "2026-02-10T16:21:32.721929",
+      "sources": [
+        {
+          "verse_id": "ch11_v50",
+          "chapter": 11,
+          "verse": 50,
+          "chapter_name": "Vishwaroopa Darshana Yoga",
+          "sanskrit": "सञ्जय उवाच | इत्यर्जुनं वासुदेवस्तथोक्त्वा | स्वकं रूपं दर्शयामास भूयः। | आश्वासयामास च भीतमेनं | भूत्वा पुनः सौम्यवपुर्महात्मा",
+          "transliteration": "",
+          "english": "Sanjaya said, Having thus spoken to Arjuna, Krishna again showed His own form. The great Soul, assuming His gentle form, then consoled Arjuna, who was terrified.",
+          "hindi": "।।11.50।। सञ्जय बोले -- वासुदेवभगवान् ने अर्जुनसे ऐसा कहकर फिर उसी प्रकारसे अपना रूप (देवरूप) दिखाया और महात्मा श्रीकृष्णने पुनः सौम्यवपु (द्विभुजरूप) होकर इस भयभीत अर्जुनको आश्वासन दिया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4833
+        },
+        {
+          "verse_id": "ch1_v15",
+          "chapter": 1,
+          "verse": 15,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनंजयः। | पौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः",
+          "transliteration": "",
+          "english": "Hrishikesha blew the Panchajanya, Arjuna blew the Devadatta, and Bhima, the wolf-bellied doer of terrible deeds, blew the great conch Paundra.",
+          "hindi": "।।1.15।। अन्तर्यामी भगवान् श्रीकृष्ण ने पाञ्चजन्य नामक तथा धनञ्जय अर्जुन ने देवदत्त नामक शंख बजाया; और भयानक कर्म करनेवाले वृकोदर भीम ने पौण्ड्र नामक महाशंख बजाया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4663
+        },
+        {
+          "verse_id": "ch1_v14",
+          "chapter": 1,
+          "verse": 14,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ। | माधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः",
+          "transliteration": "",
+          "english": "Then, Madhava (Krishna) and the son of Pandu (Arjuna), seated in the magnificent chariot yoked with white horses, blew divine conches.",
+          "hindi": "।।1.14।। उसके बाद सफेद घोड़ों से युक्त महान् रथ पर बैठे हुए लक्ष्मीपति भगवान् श्रीकृष्ण और पाण्डुपुत्र अर्जुन ने दिव्य शंखों को बड़े जोर से बजाया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4604
+        },
+        {
+          "verse_id": "ch1_v1",
+          "chapter": 1,
+          "verse": 1,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "धृतराष्ट्र उवाच | धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः। | मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय",
+          "transliteration": "",
+          "english": "Dhritarashtra said, \"What did my people and the sons of Pandu do when they had assembled together, eager for battle, on the holy plain of Kurukshetra, O Sanjaya?\"",
+          "hindi": "।।1.1।। धृतराष्ट्र बोले (टिप्पणी प0 1.2) - हे संजय! (टिप्पणी प0 1.3) धर्मभूमि कुरुक्षेत्र में युद्ध की इच्छा से इकट्ठे हुए मेरेे और पाण्डु के पुत्रों ने भी क्या किया?",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4526
+        },
+        {
+          "verse_id": "ch11_v13",
+          "chapter": 11,
+          "verse": 13,
+          "chapter_name": "Vishwaroopa Darshana Yoga",
+          "sanskrit": "तत्रैकस्थं जगत्कृत्स्नं प्रविभक्तमनेकधा। | अपश्यद्देवदेवस्य शरीरे पाण्डवस्तदा",
+          "transliteration": "",
+          "english": "There, in the body of the God of gods, Arjuna then saw the entire universe resting in one, with its myriad of divisions.",
+          "hindi": "।।11.13।। उस समय अर्जुनने देवोंके देव भगवान् के उस शरीरमें एक जगह स्थित अनेक प्रकारके विभागोंमें विभक्त सम्पूर्ण जगत् को देखा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4504
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Hey friend, I've got you covered 🙏! Arjuna's journey in the Gita is all about finding inner strength 💪 and calm in the midst of chaos, just like when he blew the Devadatta conch 🎺. May you find your own inner peace on your journey, priya 🧘‍♂️💫",
+      "timestamp": "2026-02-10T16:21:32.721929",
+      "sources": [
+        {
+          "verse_id": "ch11_v50",
+          "chapter": 11,
+          "verse": 50,
+          "chapter_name": "Vishwaroopa Darshana Yoga",
+          "sanskrit": "सञ्जय उवाच | इत्यर्जुनं वासुदेवस्तथोक्त्वा | स्वकं रूपं दर्शयामास भूयः। | आश्वासयामास च भीतमेनं | भूत्वा पुनः सौम्यवपुर्महात्मा",
+          "transliteration": "",
+          "english": "Sanjaya said, Having thus spoken to Arjuna, Krishna again showed His own form. The great Soul, assuming His gentle form, then consoled Arjuna, who was terrified.",
+          "hindi": "।।11.50।। सञ्जय बोले -- वासुदेवभगवान् ने अर्जुनसे ऐसा कहकर फिर उसी प्रकारसे अपना रूप (देवरूप) दिखाया और महात्मा श्रीकृष्णने पुनः सौम्यवपु (द्विभुजरूप) होकर इस भयभीत अर्जुनको आश्वासन दिया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4833
+        },
+        {
+          "verse_id": "ch1_v15",
+          "chapter": 1,
+          "verse": 15,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनंजयः। | पौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदरः",
+          "transliteration": "",
+          "english": "Hrishikesha blew the Panchajanya, Arjuna blew the Devadatta, and Bhima, the wolf-bellied doer of terrible deeds, blew the great conch Paundra.",
+          "hindi": "।।1.15।। अन्तर्यामी भगवान् श्रीकृष्ण ने पाञ्चजन्य नामक तथा धनञ्जय अर्जुन ने देवदत्त नामक शंख बजाया; और भयानक कर्म करनेवाले वृकोदर भीम ने पौण्ड्र नामक महाशंख बजाया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4663
+        },
+        {
+          "verse_id": "ch1_v14",
+          "chapter": 1,
+          "verse": 14,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "ततः श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ। | माधवः पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतुः",
+          "transliteration": "",
+          "english": "Then, Madhava (Krishna) and the son of Pandu (Arjuna), seated in the magnificent chariot yoked with white horses, blew divine conches.",
+          "hindi": "।।1.14।। उसके बाद सफेद घोड़ों से युक्त महान् रथ पर बैठे हुए लक्ष्मीपति भगवान् श्रीकृष्ण और पाण्डुपुत्र अर्जुन ने दिव्य शंखों को बड़े जोर से बजाया।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4604
+        },
+        {
+          "verse_id": "ch1_v1",
+          "chapter": 1,
+          "verse": 1,
+          "chapter_name": "Arjuna Visada Yoga",
+          "sanskrit": "धृतराष्ट्र उवाच | धर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः। | मामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय",
+          "transliteration": "",
+          "english": "Dhritarashtra said, \"What did my people and the sons of Pandu do when they had assembled together, eager for battle, on the holy plain of Kurukshetra, O Sanjaya?\"",
+          "hindi": "।।1.1।। धृतराष्ट्र बोले (टिप्पणी प0 1.2) - हे संजय! (टिप्पणी प0 1.3) धर्मभूमि कुरुक्षेत्र में युद्ध की इच्छा से इकट्ठे हुए मेरेे और पाण्डु के पुत्रों ने भी क्या किया?",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4526
+        },
+        {
+          "verse_id": "ch11_v13",
+          "chapter": 11,
+          "verse": 13,
+          "chapter_name": "Vishwaroopa Darshana Yoga",
+          "sanskrit": "तत्रैकस्थं जगत्कृत्स्नं प्रविभक्तमनेकधा। | अपश्यद्देवदेवस्य शरीरे पाण्डवस्तदा",
+          "transliteration": "",
+          "english": "There, in the body of the God of gods, Arjuna then saw the entire universe resting in one, with its myriad of divisions.",
+          "hindi": "।।11.13।। उस समय अर्जुनने देवोंके देव भगवान् के उस शरीरमें एक जगह स्थित अनेक प्रकारके विभागोंमें विभक्त सम्पूर्ण जगत् को देखा।",
+          "commentary": null,
+          "speaker": null,
+          "similarity_score": 0.4504
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}
