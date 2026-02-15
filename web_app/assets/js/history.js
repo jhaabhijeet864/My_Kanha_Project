@@ -1,214 +1,197 @@
-// History management for chat and search operations
-const STORAGE_KEY = 'kanha_history';
-const MAX_HISTORY_ITEMS = 50;
+// Simple History Management - Fetches from backend API or localStorage
+const LOCAL_CHAT_KEY = 'kanha_chat_history';
+const API_BASE_URL = window.API_BASE_URL || window.location.origin;
 
-/**
- * Save a chat message to history
- * @param {Object} message - Message object with properties: id, text, response, timestamp, type
- */
-function saveToHistory(message) {
-    try {
-        const history = getHistory();
-        
-        // Add timestamp if not provided
-        if (!message.timestamp) {
-            message.timestamp = new Date().toISOString();
-        }
-        
-        // Add unique ID if not provided
-        if (!message.id) {
-            message.id = generateId();
-        }
-        
-        // Add to beginning of history
-        history.unshift(message);
-        
-        // Keep only recent items (limit to MAX_HISTORY_ITEMS)
-        if (history.length > MAX_HISTORY_ITEMS) {
-            history.pop();
-        }
-        
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
-        console.log('History saved:', message);
-        
-        return message;
-    } catch (error) {
-        console.error('Error saving to history:', error);
-        return null;
-    }
+// Get auth token
+function getToken() {
+    return localStorage.getItem('authToken') || localStorage.getItem('jwt_token') || null;
 }
 
-/**
- * Get all history items
- * @returns {Array} Array of history items
- */
-function getHistory() {
+// Get local chat history (for guest mode)
+function getLocalHistory() {
     try {
-        const historyData = localStorage.getItem(STORAGE_KEY);
-        return historyData ? JSON.parse(historyData) : [];
-    } catch (error) {
-        console.error('Error retrieving history:', error);
+        return JSON.parse(localStorage.getItem(LOCAL_CHAT_KEY)) || [];
+    } catch {
         return [];
     }
 }
 
-/**
- * Get history items filtered by type
- * @param {String} type - Type of history (e.g., 'chat', 'search', 'verse')
- * @returns {Array} Filtered history items
- */
-function getHistoryByType(type) {
-    const history = getHistory();
-    return history.filter(item => item.type === type);
+// Clear local chat history
+function clearLocalHistory() {
+    localStorage.removeItem(LOCAL_CHAT_KEY);
 }
 
-/**
- * Clear specific history item by ID
- * @param {String} id - ID of the history item to delete
- */
-function deleteHistoryItem(id) {
+// Fetch history from backend
+async function fetchBackendHistory() {
+    const token = getToken();
+    if (!token) return [];
+
     try {
-        const history = getHistory();
-        const filtered = history.filter(item => item.id !== id);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(filtered));
-        console.log('History item deleted:', id);
-        return true;
+        const response = await fetch(`${API_BASE_URL}/api/history/list`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) return [];
+        const data = await response.json();
+        return data.sessions || [];
     } catch (error) {
-        console.error('Error deleting history item:', error);
+        console.error('Error fetching history:', error);
+        return [];
+    }
+}
+
+// Fetch single conversation details
+async function fetchConversation(sessionId) {
+    const token = getToken();
+    if (!token) return null;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/history/${sessionId}`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        if (!response.ok) return null;
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching conversation:', error);
+        return null;
+    }
+}
+
+// Delete conversation from backend
+async function deleteBackendConversation(sessionId) {
+    const token = getToken();
+    if (!token) return false;
+
+    try {
+        const response = await fetch(`${API_BASE_URL}/api/history/${sessionId}`, {
+            method: 'DELETE',
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        return response.ok;
+    } catch (error) {
+        console.error('Error deleting conversation:', error);
         return false;
     }
 }
 
-/**
- * Clear all history
- */
-function clearAllHistory() {
-    try {
-        localStorage.removeItem(STORAGE_KEY);
-        console.log('All history cleared');
-        return true;
-    } catch (error) {
-        console.error('Error clearing history:', error);
-        return false;
-    }
+// Escape HTML
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
-/**
- * Save search query to history
- * @param {String} query - Search query text
- * @param {Array} results - Search results
- */
-function saveSearchToHistory(query, results = []) {
-    const message = {
-        type: 'search',
-        text: query,
-        results: results,
-        resultCount: results.length
-    };
-    return saveToHistory(message);
-}
+// Render history on page
+async function renderHistory() {
+    const container = document.querySelector('.history-list');
+    if (!container) return;
 
-/**
- * Save chat message to history
- * @param {String} userMessage - User's message
- * @param {String} botResponse - Bot's response
- */
-function saveChatToHistory(userMessage, botResponse) {
-    const message = {
-        type: 'chat',
-        text: userMessage,
-        response: botResponse
-    };
-    return saveToHistory(message);
-}
+    container.innerHTML = '<p class="history-loading">Loading history...</p>';
 
-/**
- * Save verse view to history
- * @param {Object} verse - Verse object with id, chapter, verse, text
- */
-function saveVerseToHistory(verse) {
-    const message = {
-        type: 'verse',
-        text: `Chapter ${verse.chapter}, Verse ${verse.verse}`,
-        verse: verse
-    };
-    return saveToHistory(message);
-}
-
-/**
- * Export history as JSON file
- * @param {String} filename - Optional filename for export
- */
-function exportHistory(filename = 'kanha_history.json') {
-    try {
-        const history = getHistory();
-        const dataStr = JSON.stringify(history, null, 2);
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        
-        const url = URL.createObjectURL(dataBlob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = filename;
-        link.click();
-        
-        URL.revokeObjectURL(url);
-        console.log('History exported');
-        return true;
-    } catch (error) {
-        console.error('Error exporting history:', error);
-        return false;
-    }
-}
-
-/**
- * Import history from JSON file
- * @param {File} file - JSON file to import
- */
-function importHistory(file) {
-    try {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const importedData = JSON.parse(e.target.result);
-            if (Array.isArray(importedData)) {
-                const currentHistory = getHistory();
-                const mergedHistory = [...importedData, ...currentHistory]
-                    .slice(0, MAX_HISTORY_ITEMS);
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(mergedHistory));
-                console.log('History imported successfully');
-            }
-        };
-        reader.readAsText(file);
-        return true;
-    } catch (error) {
-        console.error('Error importing history:', error);
-        return false;
-    }
-}
-
-/**
- * Generate unique ID for history items
- * @returns {String} Unique ID
- */
-function generateId() {
-    return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-/**
- * Get statistics about history
- * @returns {Object} History statistics
- */
-function getHistoryStats() {
-    const history = getHistory();
-    const stats = {
-        totalItems: history.length,
-        byType: {},
-        oldestEntry: history[history.length - 1]?.timestamp || null,
-        newestEntry: history[0]?.timestamp || null
-    };
+    const token = getToken();
     
-    history.forEach(item => {
-        stats.byType[item.type] = (stats.byType[item.type] || 0) + 1;
-    });
-    
-    return stats;
+    // Guest mode - show local history
+    if (!token) {
+        renderGuestHistory(container);
+        return;
+    }
+
+    // Logged in - fetch from backend
+    const sessions = await fetchBackendHistory();
+
+    if (sessions.length === 0) {
+        container.innerHTML = '<p class="history-empty">No history yet. Start chatting!</p>';
+        return;
+    }
+
+    let html = `<button class="clear-all-btn" onclick="clearAllHistory()">Clear All</button>`;
+
+    for (const session of sessions) {
+        const conversation = await fetchConversation(session.session_id);
+        if (!conversation || !conversation.messages || conversation.messages.length === 0) continue;
+
+        const firstUserMsg = conversation.messages.find(m => m.role === 'user');
+        const firstAssistantMsg = conversation.messages.find(m => m.role === 'assistant');
+
+        html += `
+            <div class="history-item" data-session="${session.session_id}">
+                <div class="history-item-header">
+                    <span>💬 Chat (${conversation.message_count} messages)</span>
+                    <button class="delete-btn" onclick="deleteHistoryItem('${session.session_id}')">🗑️</button>
+                </div>
+                <p><strong>You:</strong> ${escapeHtml(firstUserMsg?.content || 'No message')}</p>
+                ${firstAssistantMsg ? `<p class="history-response"><strong>Kanha:</strong> ${escapeHtml(firstAssistantMsg.content.substring(0, 150))}${firstAssistantMsg.content.length > 150 ? '...' : ''}</p>` : ''}
+            </div>
+        `;
+    }
+
+    container.innerHTML = html;
 }
+
+// Render guest mode history from localStorage
+function renderGuestHistory(container) {
+    const messages = getLocalHistory();
+    
+    if (messages.length === 0) {
+        container.innerHTML = '<p class="history-empty">No history yet. Start chatting!</p>';
+        return;
+    }
+
+    let html = `
+        <p class="guest-notice">📌 Guest mode: History is stored locally. <a href="login.html">Login</a> to save your history permanently.</p>
+        <button class="clear-all-btn" onclick="clearGuestHistory()">Clear All</button>
+    `;
+
+    // Group messages into pairs (user + assistant)
+    for (let i = 0; i < messages.length; i += 2) {
+        const userMsg = messages[i];
+        const assistantMsg = messages[i + 1];
+        
+        if (!userMsg || userMsg.role !== 'user') continue;
+
+        html += `
+            <div class="history-item">
+                <div class="history-item-header">
+                    <span>💬 Chat</span>
+                </div>
+                <p><strong>You:</strong> ${escapeHtml(userMsg.content)}</p>
+                ${assistantMsg ? `<p class="history-response"><strong>Kanha:</strong> ${escapeHtml(assistantMsg.content.substring(0, 150))}${assistantMsg.content.length > 150 ? '...' : ''}</p>` : ''}
+            </div>
+        `;
+    }
+
+    container.innerHTML = html;
+}
+
+// Clear guest history
+function clearGuestHistory() {
+    if (!confirm('Clear all history? This cannot be undone.')) return;
+    clearLocalHistory();
+    renderHistory();
+}
+
+// Delete single item (backend only)
+async function deleteHistoryItem(sessionId) {
+    if (!confirm('Delete this conversation?')) return;
+    
+    const success = await deleteBackendConversation(sessionId);
+    if (success) {
+        renderHistory();
+    } else {
+        alert('Failed to delete conversation');
+    }
+}
+
+// Clear all history (backend)
+async function clearAllHistory() {
+    if (!confirm('Clear all history? This cannot be undone.')) return;
+    
+    const sessions = await fetchBackendHistory();
+    for (const session of sessions) {
+        await deleteBackendConversation(session.session_id);
+    }
+    renderHistory();
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', renderHistory);

@@ -1,7 +1,7 @@
 // Search Bhagavad Gita verses from cleaned dataset
-// Use relative path from web_app folder to data folder
+// Use absolute path to data folder mounted by backend
 
-const DATASET_URL = '../data/cleaned/gita_master.json';
+const DATASET_URL = '/data/cleaned/gita_master.json';
 
 async function fetchGitaData() {
     console.log('Fetching Gita data from:', DATASET_URL);
@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             gitaData = data;
             console.log('Gita dataset loaded successfully!', data.metadata);
-            resultsDiv.innerHTML = '<p style="color:green;">Type your Keyword to search like Arjuna, Krishna, pandava.</p>';
+            resultsDiv.innerHTML = '<p style="color:green;">Type your search keyword like Arjuna, Krishna, pandava.</p>';
         })
         .catch(err => {
             console.error('Failed to load Gita dataset:', err);
-            resultsDiv.innerHTML = '<p style="color:red;">Error loading Bhagavad Gita data. Check console for details.</p>';
+            resultsDiv.innerHTML = '<p style="color:red;">Error loading Bhagavad Gita data.</p>';
         });
 
     function performSearch() {

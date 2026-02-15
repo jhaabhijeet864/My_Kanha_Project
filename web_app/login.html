@@ -59,21 +59,23 @@
       </div>
 
       <!-- Google sign-in via Firebase popup/redirect -->
-      <button type="button" id="googleSignInBtn" class="login-btn" style="background:#fff;color:#333;border:1px solid #ccc;display:flex;align-items:center;gap:8px;justify-content:center">
-        <img src="assets/images/icon-192.png" alt="Google" style="width:20px;height:20px;border-radius:4px"> Continue with Google
+      <button type="button" id="googleSignInBtn" class="google-signin-btn">
+        <img src="assets/images/google_logo.png" alt="Google"> Continue with Google
       </button>
 
-      <p class="local-dev-notice" id="localDevNotice" style="display:none;font-size:0.8rem;color:#b6893e;margin:-0.5rem 0 1rem;text-align:center;">
+      <p class="local-dev-notice" id="localDevNotice">
         📱 On local network? Use email/password login.
       </p>
 
-      <p class="signup-link">
-        Don't have an account? <a href="signup.html">Sign up here</a>
-      </p>
+      <div class="auth-links">
+        <p class="signup-link">
+          Don't have an account? <a href="signup.html">Sign up here</a>
+        </p>
 
-      <p class="forgot-password">
-        <a href="forgot-password.html">Forgot your password?</a>
-      </p>
+        <p class="forgot-password">
+          <a href="forgot-password.html">Forgot your password?</a>
+        </p>
+      </div>
 
       <p class="terms-text">
         By signing in, you agree to our <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>
