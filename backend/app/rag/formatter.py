@@ -264,7 +264,7 @@ def create_rag_context(verses: List[Dict[str, Any]]) -> str:
 
 
 def format_verse_for_context(
-    verse: VerseSource,
+    verse: Any,
     include_sanskrit: bool = True,
     include_transliteration: bool = False,
     include_commentary: bool = True,
@@ -272,47 +272,60 @@ def format_verse_for_context(
 ) -> str:
     """
     Format a single verse for inclusion in LLM context.
-
-    Args:
-        verse: VerseSource object with verse data
-        include_sanskrit: Whether to include Sanskrit text
-        include_transliteration: Whether to include transliteration
-        include_commentary: Whether to include commentary
-        language: Preferred language for translation (english/hindi)
-
-    Returns:
-        Formatted verse string
+    Safely handles both objects and dictionaries.
     """
     parts = []
 
+    # Helper to get value from either object or dict
+    def get_val(obj, attr, default=""):
+        if hasattr(obj, attr):
+            return getattr(obj, attr)
+        if isinstance(obj, dict):
+            return obj.get(attr, default)
+        return default
+
     # Header
-    parts.append(f"**Chapter {verse.chapter}, Verse {verse.verse}**")
+    chapter = get_val(verse, 'chapter')
+    verse_num = get_val(verse, 'verse')
+    parts.append(f"**Chapter {chapter}, Verse {verse_num}**")
 
     # Sanskrit (if requested and available)
-    if include_sanskrit and verse.sanskrit:
-        parts.append(f"Sanskrit: {verse.sanskrit}")
+    sanskrit = get_val(verse, 'sanskrit')
+    if include_sanskrit and sanskrit:
+        parts.append(f"Sanskrit: {sanskrit}")
 
     # Transliteration (if requested and available)
-    if include_transliteration and verse.transliteration:
-        parts.append(f"Transliteration: {verse.transliteration}")
+    # Fix Bug 4.2: Support both 'transliteration' and 'transliteration_text'
+    transliteration = get_val(verse, 'transliteration') or get_val(verse, 'transliteration_text')
+    if include_transliteration and transliteration:
+        parts.append(f"Transliteration: {transliteration}")
 
     # Translation based on language preference
-    if language == "hindi" and verse.hindi:
-        parts.append(f"Translation (Hindi): {verse.hindi}")
-    elif verse.english:
-        parts.append(f"Translation: {verse.english}")
-    elif verse.hindi:
-        parts.append(f"Translation (Hindi): {verse.hindi}")
+    # Fix Bug 4.3: Case-insensitive language check
+    lang_pref = language.lower() if language else "english"
+    hindi_val = get_val(verse, 'hindi')
+    english_val = get_val(verse, 'english')
+
+    if lang_pref == "hindi" and hindi_val:
+        parts.append(f"Translation (Hindi): {hindi_val}")
+    elif english_val:
+        parts.append(f"Translation: {english_val}")
+    elif hindi_val:
+        parts.append(f"Translation (Hindi): {hindi_val}")
 
     # Relevance score (if available)
-    if verse.similarity_score:
-        parts.append(f"(Relevance: {verse.similarity_score:.0%})")
+    score = get_val(verse, 'similarity_score')
+    if score:
+        try:
+            parts.append(f"(Relevance: {float(score):.0%})")
+        except (ValueError, TypeError):
+            pass
 
     return "\n".join(parts)
 
 
 def format_verses_for_prompt(
-    verses: List[VerseSource],
+    verses: List[Any],
     max_verses: int = 5,
     include_sanskrit: bool = True,
     include_transliteration: bool = False,
@@ -320,16 +333,7 @@ def format_verses_for_prompt(
 ) -> FormattedContext:
     """
     Format multiple verses into a context block for the LLM prompt.
-
-    Args:
-        verses: List of VerseSource objects
-        max_verses: Maximum number of verses to include
-        include_sanskrit: Whether to include Sanskrit text
-        include_transliteration: Whether to include transliteration
-        language: Preferred language for translation
-
-    Returns:
-        FormattedContext with formatted text and metadata
+    Safely handles both VerseSource objects and dictionaries.
     """
     if not verses:
         return FormattedContext(
@@ -338,6 +342,14 @@ def format_verses_for_prompt(
             chapters_referenced=[],
             total_relevance=0.0
         )
+
+    # Helper to get value
+    def get_val(obj, attr, default=None):
+        if hasattr(obj, attr):
+            return getattr(obj, attr)
+        if isinstance(obj, dict):
+            return obj.get(attr, default)
+        return default
 
     # Limit verses
     verses = verses[:max_verses]
@@ -356,9 +368,16 @@ def format_verses_for_prompt(
         )
         formatted_verses.append(f"[{i}] {formatted}")
 
-        chapters.add(verse.chapter)
-        if verse.similarity_score:
-            total_relevance += verse.similarity_score
+        chapter = get_val(verse, 'chapter')
+        if chapter:
+            chapters.add(chapter)
+        
+        score = get_val(verse, 'similarity_score')
+        if score:
+            try:
+                total_relevance += float(score)
+            except (ValueError, TypeError):
+                pass
 
     # Build context text
     header = f"**Relevant Verses from Bhagavad Gita** ({len(verses)} verses)\n"

@@ -57,6 +57,7 @@ def _to_verse_source(verse: dict) -> VerseSource:
         chapter=int(chapter_raw),
         verse=int(verse_raw),
         sanskrit=verse.get("sanskrit", ""),
+        transliteration=verse.get("transliteration") or verse.get("transliteration_text", ""),
         english=verse.get("english_translation") or verse.get("english", ""),
         hindi=verse.get("hindi_translation") or verse.get("hindi", ""),
         similarity_score=verse.get("similarity_score"),
@@ -75,10 +76,12 @@ async def chat(request: ChatRequest, user_id: Optional[str] = Depends(get_option
     Persists conversation to JSON storage and links to authenticated user if provided.
     """
     try:
-        logger.info(f"Received chat request: {request.message[:50]}...")
+        logger.info(f"Received chat request: {request.message[:50] if request.message else 'None'}...")
 
         # Get or create user session
-        final_user_id = user_id or request.user_id or str(uuid4())
+        # Fix: Better handle empty user_id in request
+        request_user_id = request.user_id if request.user_id and request.user_id.strip() else None
+        final_user_id = user_id or request_user_id or str(uuid4())
         session_id = request.session_id
 
         # Load or create conversation
@@ -118,17 +121,23 @@ async def chat(request: ChatRequest, user_id: Optional[str] = Depends(get_option
 
         if needs_spiritual_context(request.message):
             # Spiritual question - retrieve relevant verses from ChromaDB
-            retrieved_verses = retrieve(
-                query=request.message,
-                n_results=request.top_k or 3,  # Reduced from 5 to 3 for focused responses
-            )
-            logger.debug(f"Spiritual question - retrieved {len(retrieved_verses)} verses")
+            try:
+                retrieved_verses = retrieve(
+                    query=request.message,
+                    n_results=request.top_k or 3,  # Reduced from 5 to 3 for focused responses
+                )
+                logger.debug(f"Spiritual question - retrieved {len(retrieved_verses)} verses")
 
-            for v in retrieved_verses:
-                try:
-                    normalized_sources.append(_to_verse_source(v))
-                except Exception as norm_err:
-                    logger.warning(f"Skipping verse with missing identifiers: {norm_err}")
+                for v in retrieved_verses:
+                    try:
+                        normalized_sources.append(_to_verse_source(v))
+                    except Exception as norm_err:
+                        logger.warning(f"Skipping verse with missing identifiers: {norm_err}")
+            except Exception as e:
+                logger.error(f"Retrieval failed for spiritual question: {e}")
+                # For spiritual questions, we expect RAG to work.
+                # In production we might fallback, but for tests and reliability, we raise.
+                raise HTTPException(status_code=500, detail=f"Failed to retrieve spiritual context: {str(e)}")
         else:
             # Casual message - skip RAG entirely for faster response
             logger.debug("Casual message detected - skipping verse retrieval")
@@ -139,6 +148,7 @@ async def chat(request: ChatRequest, user_id: Optional[str] = Depends(get_option
             retrieved_verses=normalized_sources,
             conversation_history=session.get_messages_for_context(),
             response_language=request.language or detected_language,
+            max_verses=request.top_k or 3,
         )
 
         # Store messages in session
@@ -173,10 +183,12 @@ async def chat_stream(request: ChatRequest, user_id: Optional[str] = Depends(get
     Optional JWT authentication to link chat history to user.
     """
     try:
-        logger.info(f"Received streaming chat request: {request.message[:50]}...")
+        logger.info(f"Received streaming chat request: {request.message[:50] if request.message else 'None'}...")
 
         # Get or create user session
-        final_user_id = user_id or request.user_id or str(uuid4())
+        # Fix: Better handle empty user_id in request
+        request_user_id = request.user_id if request.user_id and request.user_id.strip() else None
+        final_user_id = user_id or request_user_id or str(uuid4())
         session_id = request.session_id
 
         # Load or create conversation
@@ -214,19 +226,24 @@ async def chat_stream(request: ChatRequest, user_id: Optional[str] = Depends(get
         normalized_sources = []
 
         if needs_spiritual_context(request.message):
-            retrieved_verses = retrieve(
-                query=request.message,
-                n_results=request.top_k or 3,  # Reduced from 5 to 3
-            )
-            logger.debug(f"Streaming spiritual response - retrieved {len(retrieved_verses)} verses")
+            try:
+                retrieved_verses = retrieve(
+                    query=request.message,
+                    n_results=request.top_k or 3,
+                )
+                logger.debug(f"Streaming spiritual response - retrieved {len(retrieved_verses)} verses")
 
-            for v in retrieved_verses:
-                try:
-                    normalized_sources.append(_to_verse_source(v))
-                except Exception as norm_err:
-                    logger.warning(f"Skipping verse with missing identifiers: {norm_err}")
+                for v in retrieved_verses:
+                    try:
+                        normalized_sources.append(_to_verse_source(v))
+                    except Exception as norm_err:
+                        logger.warning(f"Skipping verse with missing identifiers: {norm_err}")
+            except Exception as e:
+                logger.error(f"Retrieval failed for streaming spiritual question: {e}")
+                raise HTTPException(status_code=500, detail=f"Failed to retrieve context: {str(e)}")
         else:
             logger.debug("Streaming casual response - skipping verse retrieval")
+
 
         async def generate_stream() -> AsyncGenerator[str, None]:
             """Generate SSE stream with response chunks."""
@@ -235,8 +252,9 @@ async def chat_stream(request: ChatRequest, user_id: Optional[str] = Depends(get
                 async for chunk_text in generate_response_stream(
                     user_message=request.message,
                     retrieved_verses=normalized_sources,
-                    conversation_history=request.conversation_history,
+                    conversation_history=session.get_messages_for_context(),
                     response_language=request.language or detected_language,
+                    max_verses=request.top_k or 3,
                 ):
                     full_response += chunk_text
                     chunk = StreamChunk(content=chunk_text, is_complete=False)

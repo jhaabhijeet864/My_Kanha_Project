@@ -4,6 +4,7 @@ Handles semantic search and retrieval of relevant Gita verses from ChromaDB
 """
 
 import logging
+import threading
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import chromadb
@@ -50,6 +51,10 @@ class GitaRetriever:
         Returns:
             List of relevant verses with metadata, sorted by relevance
         """
+        if not query or not query.strip():
+            logger.debug("Empty query received in retriever - returning no results")
+            return []
+
         try:
             results = self.collection.query(
                 query_texts=[query],
@@ -74,11 +79,20 @@ class GitaRetriever:
                     continue
                 
                 metadata = results['metadatas'][0][i]
+                # Fix Bug 3.3: Robust fallback for chapter/verse numbers
+                chapter_val = metadata.get('chapter')
+                if chapter_val is None or chapter_val == "":
+                    chapter_val = metadata.get('chapter_number', 0)
+                
+                verse_val = metadata.get('verse')
+                if verse_val is None or verse_val == "":
+                    verse_val = metadata.get('verse_number', 0)
+
                 verse = {
                     'verse_id': verse_id,
-                    'chapter_number': int(metadata.get('chapter', metadata.get('chapter_number', 0)) or 0),
+                    'chapter_number': int(chapter_val or 0),
                     'chapter_name': metadata.get('chapter_name_en') or metadata.get('chapter_name_hi', ''),
-                    'verse_number': int(metadata.get('verse', metadata.get('verse_number', 0)) or 0),
+                    'verse_number': int(verse_val or 0),
                     'sanskrit': metadata.get('sanskrit', ''),
                     'english_translation': metadata.get('english', ''),
                     'hindi_translation': metadata.get('hindi', ''),
@@ -212,13 +226,17 @@ class GitaRetriever:
 
 # Singleton instance
 _retriever = None
+_retriever_lock = threading.Lock()
 
 
 def get_retriever() -> GitaRetriever:
-    """Get or create the retriever singleton"""
+    """Get or create the retriever singleton (thread-safe)"""
     global _retriever
     if _retriever is None:
-        _retriever = GitaRetriever()
+        with _retriever_lock:
+            # Double-checked locking
+            if _retriever is None:
+                _retriever = GitaRetriever()
     return _retriever
 
 
