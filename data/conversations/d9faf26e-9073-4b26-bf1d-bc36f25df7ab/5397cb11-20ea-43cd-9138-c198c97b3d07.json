@@ -1,0 +1,22 @@
+{
+  "session_id": "5397cb11-20ea-43cd-9138-c198c97b3d07",
+  "user_id": "d9faf26e-9073-4b26-bf1d-bc36f25df7ab",
+  "created_at": "2026-04-09T04:00:35.702171",
+  "last_updated": "2026-04-09T04:00:36.685631",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello",
+      "timestamp": "2026-04-09T04:00:36.685631",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, I'm having a little trouble connecting right now. Give me a moment and try again? I'm here for you.",
+      "timestamp": "2026-04-09T04:00:36.685631",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

@@ -76,14 +76,19 @@ My_Kanha_Project/
 │
 ├── 📁 backend/                 # FastAPI REST API
 │   ├── app/
-│   │   ├── api/               # Route handlers (chat, health, admin)
+│   │   ├── api/               # Route handlers (chat, health, admin, auth)
 │   │   ├── rag/               # RAG pipeline (retriever, embeddings, formatter)
 │   │   ├── llm/               # LLM integration (Groq + Ollama)
 │   │   ├── models/            # Pydantic schemas
 │   │   ├── core/              # Safety rules, smart routing & prompts
+│   │   ├── persistence/       # PostgreSQL/Data Connect interaction
 │   │   └── utils/             # Language detection & text processing
+│   ├── dataconnect/           # Firebase Data Connect backend config
 │   ├── tests/                 # Pytest test suite
 │   └── requirements.txt
+│
+├── 📁 dataconnect/             # Firebase Data Connect Global Config
+│   └── schema/                # GraphQL schemas for PostgreSQL
 │
 ├── 📁 vector_db/               # ChromaDB Persistent Storage
 │   └── chroma/                # Indexed verse embeddings
@@ -94,8 +99,25 @@ My_Kanha_Project/
 │   ├── offline.html           # Offline fallback
 │   └── assets/                # CSS, JS, images
 │
-└── 📁 mobile_app/              # Flutter Mobile App (Planned)
+└── 📁 mobile_app/              # Flutter Mobile App (In Development)
 ```
+
+### **Core Stack**
+- **Frontend**: Vanilla JS (PWA) hosted on **Firebase Hosting**.
+- **Backend**: **FastAPI** (Python) containerized with **Docker**.
+- **Vector DB**: **ChromaDB** for semantic retrieval.
+- **Data Persistence**: **PostgreSQL** via **Firebase Data Connect** for high-performance, structured data management.
+- **LLM**: **Llama 3** (via Groq Cloud or Local Ollama).
+
+---
+
+## 🗄️ Database & Persistence
+
+The project leverages a modern, hybrid data storage strategy:
+
+1. **Semantic Knowledge**: All 701 verses are stored in **ChromaDB** as high-dimensional vectors, enabling semantic "context retrieval."
+2. **User Data & History**: Managed via **Firebase Data Connect**, which provides a type-safe GraphQL interface on top of a **PostgreSQL** database.
+3. **Local Fallback**: For edge deployments, the system supports a local **SQLite** database and JSON-based conversation storage.
 
 ---
 
@@ -114,7 +136,17 @@ Groq API Key (free at console.groq.com)
 # Clone repository
 git clone <repository-url>
 cd My_Kanha_Project
+```
 
+#### Option A: Docker (Recommended)
+```bash
+# Start all services
+docker-compose up --build
+```
+The API will be available at `http://localhost:8000`.
+
+#### Option B: Manual Setup
+```bash
 # Create virtual environment
 python -m venv .venv
 .venv\Scripts\activate  # Windows
@@ -368,7 +400,7 @@ The chatbot includes friendly safety filters:
 - [x] Smart message routing (casual vs spiritual)
 - [x] Warm Krishna persona
 - [x] JWT Authentication
-- [x] Conversation history persistence
+- [x] Conversation history persistence (Firebase Data Connect + PostgreSQL)
 - [x] PWA support (manifest, service worker, offline)
 - [x] Mobile-first responsive design
 - [x] Bottom navigation
@@ -376,16 +408,17 @@ The chatbot includes friendly safety filters:
 - [x] API documentation
 - [x] Warm Startup (Eager Init) Performance Optimization
 - [x] Response quality fine-tuning
+- [x] Docker deployment and orchestration
 
 ### 🚧 In Progress
 - [ ] PWA icon generation
 - [ ] Flutter mobile app
 
 ### 🎯 Future
-- [ ] Docker deployment
 - [ ] Voice interface
 - [ ] Personalized recommendations
 - [ ] Multi-language verse display
+- [ ] Community reflections & sharing
 
 ---
 
@@ -394,12 +427,15 @@ The chatbot includes friendly safety filters:
 ### Backend
 - **FastAPI** - Modern async web framework
 - **Groq API** - Fast cloud LLM inference
-- **ChromaDB** - Vector database
-- **Sentence Transformers** - Embedding generation
+- **ChromaDB** - Vector database for RAG
+- **Firebase Data Connect** - PostgreSQL managed connection
+- **PostgreSQL** - Relational database for persistent user data
+- **Docker** - Containerization and orchestration
 
 ### Frontend
 - **Vanilla JS** - Lightweight, no framework
 - **PWA** - Service worker, manifest, offline support
+- **Firebase Hosting** - Fast global CDN deployment
 - **CSS3** - Mobile-first, dark mode, safe areas
 
 ---

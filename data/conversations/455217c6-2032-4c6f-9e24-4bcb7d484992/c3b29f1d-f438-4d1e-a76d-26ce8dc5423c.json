@@ -1,0 +1,22 @@
+{
+  "session_id": "c3b29f1d-f438-4d1e-a76d-26ce8dc5423c",
+  "user_id": "455217c6-2032-4c6f-9e24-4bcb7d484992",
+  "created_at": "2026-04-09T04:00:34.307690",
+  "last_updated": "2026-04-09T04:00:34.311892",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Why should I work if I fail?",
+      "timestamp": "2026-04-09T04:00:34.311892",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Hello Krishna says...",
+      "timestamp": "2026-04-09T04:00:34.311892",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

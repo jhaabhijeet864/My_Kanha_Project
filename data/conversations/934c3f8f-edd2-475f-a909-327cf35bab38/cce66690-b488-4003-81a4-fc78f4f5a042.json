@@ -1,0 +1,22 @@
+{
+  "session_id": "cce66690-b488-4003-81a4-fc78f4f5a042",
+  "user_id": "934c3f8f-edd2-475f-a909-327cf35bab38",
+  "created_at": "2026-04-09T04:00:33.072255",
+  "last_updated": "2026-04-09T04:00:33.073254",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Why should I work if I fail?",
+      "timestamp": "2026-04-09T04:00:33.073254",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Dear seeker, Krishna teaches us about karma yoga...",
+      "timestamp": "2026-04-09T04:00:33.073254",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

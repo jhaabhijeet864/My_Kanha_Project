@@ -405,42 +405,22 @@ data: {"content": "", "is_complete": true, "sources": [...]}
 
 ---
 
-## Database Schema
+## Database & Data Persistence
 
-### Users Table
-```sql
-CREATE TABLE users (
-  user_id TEXT PRIMARY KEY,
-  username TEXT UNIQUE NOT NULL,
-  email TEXT UNIQUE NOT NULL,
-  full_name TEXT,
-  password_hash TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  last_login TIMESTAMP,
-  is_active BOOLEAN DEFAULT 1
-);
-```
+The authentication system supports multiple persistence layers for flexibility:
 
-### Chat History Table
-```sql
-CREATE TABLE chat_history (
-  id TEXT PRIMARY KEY,
-  user_id TEXT NOT NULL,
-  session_id TEXT NOT NULL,
-  message TEXT NOT NULL,
-  response TEXT NOT NULL,
-  language TEXT DEFAULT 'english',
-  sources TEXT,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-```
+### 1. Primary DB (PostgreSQL)
+Managed via **Firebase Data Connect**. This is the production-ready layer used for high-scale user management and cross-platform synchronization.
+
+### 2. Local Auth DB (SQLite)
+Used for local development and edge deployments where a full PostgreSQL instance is not required.
 
 **Database Location:** `./data/users/users.db`
 
----
+### 3. Conversation Store (JSON/MVP)
+Currently, conversation history is stored as structured JSON files to allow for rapid iteration and easy migration to the Data Connect schema.
 
-## Security Features
+**Storage Location:** `./data/conversations/`
 
 ### Password Security
 - ✅ **PBKDF2 Hashing** - 100,000 iterations

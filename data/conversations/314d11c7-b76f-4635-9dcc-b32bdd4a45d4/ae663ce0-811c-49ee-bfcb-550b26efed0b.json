@@ -1,0 +1,22 @@
+{
+  "session_id": "ae663ce0-811c-49ee-bfcb-550b26efed0b",
+  "user_id": "314d11c7-b76f-4635-9dcc-b32bdd4a45d4",
+  "created_at": "2026-04-09T04:00:37.279502",
+  "last_updated": "2026-04-09T04:00:37.280524",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is my duty?",
+      "timestamp": "2026-04-09T04:00:37.280524",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Dear seeker, Krishna teaches us about karma yoga...",
+      "timestamp": "2026-04-09T04:00:37.280524",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

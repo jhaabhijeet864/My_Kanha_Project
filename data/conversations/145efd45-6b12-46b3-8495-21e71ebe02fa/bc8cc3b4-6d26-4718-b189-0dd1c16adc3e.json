@@ -1,0 +1,22 @@
+{
+  "session_id": "bc8cc3b4-6d26-4718-b189-0dd1c16adc3e",
+  "user_id": "145efd45-6b12-46b3-8495-21e71ebe02fa",
+  "created_at": "2026-04-09T04:00:33.858323",
+  "last_updated": "2026-04-09T04:00:33.859330",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "harmful content",
+      "timestamp": "2026-04-09T04:00:33.859330",
+      "sources": null
+    },
+    {
+      "role": "assistant",
+      "content": "I cannot assist with that.",
+      "timestamp": "2026-04-09T04:00:33.859330",
+      "sources": null
+    }
+  ],
+  "metadata": {}
+}

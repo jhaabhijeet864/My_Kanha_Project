@@ -1,0 +1,60 @@
+{
+  "session_id": "55d3105c-3c9b-4220-aa32-6d0965e70583",
+  "user_id": "1a1b5d5b-72ce-4986-ad1f-90d318adc29b",
+  "created_at": "2026-04-09T04:00:33.335952",
+  "last_updated": "2026-04-09T04:00:33.338780",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Why should I work if I fail?",
+      "timestamp": "2026-04-09T04:00:33.338780",
+      "sources": [
+        {
+          "chapter": 2,
+          "verse": 47,
+          "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।",
+          "transliteration": "",
+          "english": "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action.",
+          "hindi": "कर्म ही तुम्हारा अधिकार है, फल का नहीं।",
+          "similarity_score": 0.92
+        },
+        {
+          "chapter": 2,
+          "verse": 48,
+          "sanskrit": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।",
+          "transliteration": "",
+          "english": "Perform your duty with equanimity, abandoning attachment to success and failure.",
+          "hindi": "समत्व में स्थित होकर कर्म करो, आसक्ति को त्याग दो।",
+          "similarity_score": 0.85
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Dear seeker, Krishna teaches us about karma yoga...",
+      "timestamp": "2026-04-09T04:00:33.338780",
+      "sources": [
+        {
+          "chapter": 2,
+          "verse": 47,
+          "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।",
+          "transliteration": "",
+          "english": "You have a right to perform your prescribed duty, but you are not entitled to the fruits of action.",
+          "hindi": "कर्म ही तुम्हारा अधिकार है, फल का नहीं।",
+          "similarity_score": 0.92
+        },
+        {
+          "chapter": 2,
+          "verse": 48,
+          "sanskrit": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।",
+          "transliteration": "",
+          "english": "Perform your duty with equanimity, abandoning attachment to success and failure.",
+          "hindi": "समत्व में स्थित होकर कर्म करो, आसक्ति को त्याग दो।",
+          "similarity_score": 0.85
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

@@ -186,6 +186,9 @@ def is_casual_message(message: str) -> bool:
 
     Returns True for greetings, thanks, simple acknowledgments.
     """
+    if not message:
+        return True  # Treat as casual if empty
+
     msg = message.lower().strip()
 
     # Very short messages are usually casual
@@ -212,19 +215,24 @@ def needs_spiritual_context(message: str) -> bool:
 
     Returns True for spiritual questions, life problems, deep queries.
     """
-    msg = message.lower()
+    if not message:
+        return False
 
-    # Questions (has ?) with reasonable length likely need context
-    if "?" in message and len(message.split()) > 5:
-        return True
+    msg = message.lower().strip()
 
-    # Check for spiritual/deep patterns
+    # Check for spiritual/deep patterns first (High priority)
     for pattern in SPIRITUAL_PATTERNS:
         if pattern in msg:
             return True
 
+    # Questions (has ?) with reasonable length likely need context
+    # Reduced from 5 words to 3 for shorter questions like "What is my duty?"
+    word_count = len(msg.split())
+    if "?" in msg and word_count >= 3:
+        return True
+
     # Longer messages (>10 words) that aren't casual likely need context
-    if len(message.split()) > 10 and not is_casual_message(message):
+    if word_count > 10 and not is_casual_message(message):
         return True
 
     return False

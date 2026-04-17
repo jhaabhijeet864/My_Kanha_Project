@@ -1,0 +1,22 @@
+{
+  "session_id": "ca7a45d0-f2b2-4ec3-b18b-365bda734409",
+  "user_id": "413c81dc-5842-4686-bec5-77d04cb407f5",
+  "created_at": "2026-04-09T04:00:33.977703",
+  "last_updated": "2026-04-09T04:00:33.978698",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "मुझे क्या करना चाहिए?",
+      "timestamp": "2026-04-09T04:00:33.978698",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Dear seeker, Krishna teaches us about karma yoga...",
+      "timestamp": "2026-04-09T04:00:33.978698",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}

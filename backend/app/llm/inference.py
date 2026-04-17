@@ -34,6 +34,7 @@ async def generate_response(
     retrieved_verses: List[VerseSource],
     conversation_history: Optional[List[ConversationHistory]] = None,
     response_language: str = "english",
+    max_verses: int = 3,
 ) -> LLMResponse:
     """
     Generate Krishna's response - smart routing between casual and spiritual.
@@ -46,10 +47,15 @@ async def generate_response(
         retrieved_verses: Relevant verses from RAG retrieval (may be empty for casual)
         conversation_history: Previous messages in conversation
         response_language: Desired response language
+        max_verses: Max verses to include in context
 
     Returns:
         LLMResponse with generated text and sources
     """
+    # Fix Bug 5.1: Null guard
+    if not user_message:
+        return LLMResponse(text="My dear seeker, please share your thoughts with me.", sources=[])
+
     # Build conversation history string
     history = build_history(conversation_history)
 
@@ -67,7 +73,8 @@ async def generate_response(
         logger.debug(f"Casual message detected, skipping verse context")
     else:
         # Spiritual/deep question - use verse context wisely
-        context = build_context(retrieved_verses, language=response_language)
+        # Fix Bug 5.2: Pass max_verses to build_context
+        context = build_context(retrieved_verses, language=response_language, max_verses=max_verses)
         prompt = SPIRITUAL_RESPONSE_TEMPLATE.format(
             context=context,
             question=user_message,
@@ -98,7 +105,7 @@ async def generate_response(
         response_text = clean_response(response_text)
 
         # Add verse references to metadata only if we used them
-        verse_refs = [format_verse_citation(v) for v in sources_to_return[:3]] if sources_to_return else []
+        verse_refs = [format_verse_citation(v) for v in sources_to_return[:max_verses]] if sources_to_return else []
 
         return LLMResponse(
             text=response_text,
@@ -126,7 +133,7 @@ async def generate_response(
         )
 
 
-def build_context(verses: List[VerseSource], language: str = "english") -> str:
+def build_context(verses: List[VerseSource], language: str = "english", max_verses: int = 3) -> str:
     """
     Build concise context string from retrieved verses.
     Designed for natural weaving, not dumping.
@@ -134,10 +141,10 @@ def build_context(verses: List[VerseSource], language: str = "english") -> str:
     if not verses:
         return "No specific verses retrieved - respond from general Gita wisdom."
 
-    # Use the formatter but limit to top 3 most relevant
+    # Use the formatter but limit to top X most relevant
     formatted = format_verses_for_prompt(
-        verses[:3],  # Reduced from 5 to 3 for more focused responses
-        max_verses=3,
+        verses[:max_verses],  # Bug 5.2: Respect max_verses parameter
+        max_verses=max_verses,
         include_sanskrit=False,  # Skip Sanskrit for cleaner context
         include_transliteration=False,
         language=language
@@ -191,6 +198,7 @@ async def generate_response_stream(
     retrieved_verses: List[VerseSource],
     conversation_history: Optional[List[ConversationHistory]] = None,
     response_language: str = "english",
+    max_verses: int = 3,
 ):
     """
     Generate Krishna's response as a stream of text chunks.
@@ -201,10 +209,16 @@ async def generate_response_stream(
         retrieved_verses: Relevant verses from RAG retrieval
         conversation_history: Previous messages in conversation
         response_language: Desired response language
+        max_verses: Max verses to include in context
 
     Yields:
         Text chunks as they are generated
     """
+    # Fix Bug 5.1: Null guard
+    if not user_message:
+        yield "My dear seeker, please share your thoughts with me."
+        return
+
     # Build conversation history string
     history = build_history(conversation_history)
 
@@ -218,7 +232,8 @@ async def generate_response_stream(
         )
         logger.debug("Streaming casual response")
     else:
-        context = build_context(retrieved_verses, language=response_language)
+        # Fix Bug 5.2: Pass max_verses to build_context
+        context = build_context(retrieved_verses, language=response_language, max_verses=max_verses)
         prompt = SPIRITUAL_RESPONSE_TEMPLATE.format(
             context=context,
             question=user_message,

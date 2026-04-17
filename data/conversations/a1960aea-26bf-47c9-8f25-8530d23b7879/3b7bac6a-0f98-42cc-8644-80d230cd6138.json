@@ -1,0 +1,22 @@
+{
+  "session_id": "3b7bac6a-0f98-42cc-8644-80d230cd6138",
+  "user_id": "a1960aea-26bf-47c9-8f25-8530d23b7879",
+  "created_at": "2026-04-09T04:00:34.195101",
+  "last_updated": "2026-04-09T04:00:34.197096",
+  "language": "english",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is dharma?",
+      "timestamp": "2026-04-09T04:00:34.197096",
+      "sources": []
+    },
+    {
+      "role": "assistant",
+      "content": "Dear seeker, Krishna teaches us about karma yoga...",
+      "timestamp": "2026-04-09T04:00:34.197096",
+      "sources": []
+    }
+  ],
+  "metadata": {}
+}
