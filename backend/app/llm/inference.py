@@ -4,7 +4,7 @@ Smart context assembly and response generation.
 Routes between casual chat and spiritual questions.
 """
 
-from typing import List, Optional
+from typing import List, Optional, AsyncGenerator
 from dataclasses import dataclass, field
 
 from app.logger import logger
@@ -199,7 +199,7 @@ async def generate_response_stream(
     conversation_history: Optional[List[ConversationHistory]] = None,
     response_language: str = "english",
     max_verses: int = 3,
-):
+) -> AsyncGenerator[str, None]:
     """
     Generate Krishna's response as a stream of text chunks.
     Uses same smart routing as non-streaming version.

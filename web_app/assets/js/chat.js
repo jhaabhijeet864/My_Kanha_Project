@@ -128,8 +128,17 @@ async function handleSubmit(e) {
             getRecentHistory()
         );
 
+        // Validate response structure
+        if (!response || typeof response !== 'object') {
+            throw new Error('Invalid API response format');
+        }
+        
+        if (!response.response || typeof response.response !== 'string') {
+            throw new Error('API response missing or invalid message content');
+        }
+
         // Add Krishna's response
-        addKrishnaMessage(response.response, response.sources);
+        addKrishnaMessage(response.response, Array.isArray(response.sources) ? response.sources : []);
 
         // Update conversation history
         updateConversationHistory(message, response.response);
@@ -321,10 +330,28 @@ function saveConversationHistory() {
  */
 function loadConversationHistory() {
     const history = getLocal('kanha_chat_history', []);
+    
+    if (!Array.isArray(history)) {
+        console.warn('Invalid conversation history format, resetting');
+        chatState.conversationHistory = [];
+        return;
+    }
+    
     chatState.conversationHistory = history;
 
-    // Render previous messages
+    // Render previous messages with validation
     history.forEach((msg, index) => {
+        // Validate message structure
+        if (!msg || typeof msg !== 'object') {
+            console.warn(`Invalid message at index ${index}, skipping`);
+            return;
+        }
+        
+        if (!msg.role || !msg.content) {
+            console.warn(`Message missing role or content at index ${index}, skipping`);
+            return;
+        }
+        
         if (msg.role === 'user') {
             addUserMessage(msg.content);
         } else if (msg.role === 'assistant') {

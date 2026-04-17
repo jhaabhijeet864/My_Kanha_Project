@@ -227,16 +227,23 @@ class GitaRetriever:
 # Singleton instance
 _retriever = None
 _retriever_lock = threading.Lock()
+_initialization_error = None
 
 
 def get_retriever() -> GitaRetriever:
     """Get or create the retriever singleton (thread-safe)"""
-    global _retriever
+    global _retriever, _initialization_error
     if _retriever is None:
         with _retriever_lock:
             # Double-checked locking
             if _retriever is None:
-                _retriever = GitaRetriever()
+                try:
+                    _retriever = GitaRetriever()
+                except Exception as e:
+                    _initialization_error = e
+                    raise
+    if _retriever is None and _initialization_error:
+        raise _initialization_error
     return _retriever
 
 

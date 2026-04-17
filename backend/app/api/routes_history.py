@@ -20,8 +20,14 @@ from app.logger import logger
 router = APIRouter()
 
 
-def get_current_user(authorization: str = Header(...)):
+def get_current_user(authorization: Optional[str] = Header(None)):
     """Dependency to get authenticated user from Authorization header."""
+    if not authorization:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Missing authorization token",
+        )
+    
     # Extract token from "Bearer <token>"
     parts = authorization.split()
     if len(parts) != 2 or parts[0].lower() != "bearer":
@@ -89,7 +95,7 @@ async def get_sessions(token_data = Depends(get_current_user)):
 @router.get("/{session_id}")
 async def get_conversation(
     session_id: str,
-    max_messages: Optional[int] = Query(None, description="Limit number of messages"),
+    max_messages: Optional[int] = Query(None, ge=1, description="Limit number of messages (must be >= 1)"),
     token_data = Depends(get_current_user)
 ):
     """
@@ -223,5 +229,6 @@ def compute_session_duration(session) -> float:
         updated = datetime.fromisoformat(session.last_updated)
         duration = (updated - created).total_seconds() / 60
         return round(duration, 2)
-    except:
+    except (ValueError, TypeError, AttributeError) as e:
+        logger.warning(f"Error computing session duration: {e}")
         return 0.0

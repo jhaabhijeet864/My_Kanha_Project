@@ -308,18 +308,26 @@ function submitSignupForm() {
   })
     .then(response => {
       if (!response.ok) {
-        throw new Error('Signup failed');
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
       return response.json();
     })
     .then(data => {
+      // Validate response structure
+      if (!data || typeof data !== 'object') {
+        throw new Error('Invalid server response format');
+      }
+      
       // Success
       alert('Account created successfully! Redirecting to login...');
       window.location.href = 'login.html';
     })
     .catch(error => {
-      console.error('Error:', error);
-      alert('Signup failed. Please try again.');
+      console.error('Signup error:', error);
+      const errorMessage = error.message && error.message.includes('HTTP') 
+        ? 'Signup failed. Please check your information and try again.' 
+        : error.message || 'Signup failed. Please try again.';
+      alert(errorMessage);
       signupBtn.disabled = false;
       signupBtn.textContent = originalText;
     });
@@ -358,8 +366,31 @@ function handleCredentialResponse(response) {
 
 // Initialize Google Sign-In
 window.onload = function() {
-  google.accounts.id.initialize({
-    client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
-    callback: handleCredentialResponse,
-  });
+  const googleClientId = 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
+  
+  // Check if Google Client ID is configured
+  if (googleClientId.includes('YOUR_GOOGLE_CLIENT_ID')) {
+    console.warn('Google Client ID not configured. Google sign-up will be disabled.');
+    const googleBtn = document.getElementById('googleSignupBtn');
+    if (googleBtn) {
+      googleBtn.disabled = true;
+      googleBtn.title = 'Google sign-up is not configured';
+      googleBtn.textContent = 'Google Sign-Up (Not Configured)';
+    }
+    return;
+  }
+  
+  try {
+    google.accounts.id.initialize({
+      client_id: googleClientId,
+      callback: handleCredentialResponse,
+    });
+  } catch (err) {
+    console.error('Failed to initialize Google Sign-In:', err);
+    const googleBtn = document.getElementById('googleSignupBtn');
+    if (googleBtn) {
+      googleBtn.disabled = true;
+      googleBtn.title = 'Failed to initialize Google sign-up';
+    }
+  }
 };

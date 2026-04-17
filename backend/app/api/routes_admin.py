@@ -92,15 +92,11 @@ metrics_tracker = MetricsTracker()
 
 def require_api_key(x_api_key: Optional[str] = Header(None)):
     """
-    Verify admin API key.
-
-    - If API_KEY is empty and DEBUG=True, allow access
-    - If API_KEY is empty and DEBUG=False, deny access
-    - If API_KEY is set, require matching header
+    Verify admin API key - enforce authentication for all admin endpoints.
+    
+    Never allows unauthenticated access to admin endpoints, even in DEBUG mode.
     """
     if not settings.API_KEY:
-        if settings.DEBUG:
-            return True  # No key configured, allow in debug mode
         raise HTTPException(
             status_code=401,
             detail="Admin endpoints require API key configuration"

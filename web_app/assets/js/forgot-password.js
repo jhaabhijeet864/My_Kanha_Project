@@ -33,7 +33,14 @@ function showMessage(message, type = 'error') {
     if (!msgDiv) {
         msgDiv = document.createElement('div');
         msgDiv.className = 'message-display';
-        document.querySelector('.login-form').insertBefore(msgDiv, document.querySelector('.form-group'));
+        const form = document.getElementById('resetForm');
+        if (form) {
+            form.insertBefore(msgDiv, form.firstChild);
+        } else {
+            console.error('Reset form not found');
+            alert(message); // Fallback to alert
+            return;
+        }
     }
     
     msgDiv.textContent = message;

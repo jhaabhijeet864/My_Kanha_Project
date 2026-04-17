@@ -157,7 +157,8 @@ class GroqClient(BaseLLMClient):
                                 data = json.loads(data_str)
                                 if delta := data.get("choices", [{}])[0].get("delta", {}).get("content"):
                                     yield delta
-                            except json.JSONDecodeError:
+                            except json.JSONDecodeError as e:
+                                logger.warning(f"Failed to parse JSON from stream: {data_str[:100]}")
                                 continue
 
         except Exception as e:

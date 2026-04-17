@@ -168,13 +168,40 @@ function importHistory(file) {
     try {
         const reader = new FileReader();
         reader.onload = function(e) {
-            const importedData = JSON.parse(e.target.result);
-            if (Array.isArray(importedData)) {
+            try {
+                const importedData = JSON.parse(e.target.result);
+                
+                // Validate imported data is an array
+                if (!Array.isArray(importedData)) {
+                    console.error('Imported data is not an array');
+                    return;
+                }
+                
+                // Validate each history item
+                const validatedHistory = importedData.filter((item, index) => {
+                    if (!item || typeof item !== 'object') {
+                        console.warn(`Skipping invalid item at index ${index}`);
+                        return false;
+                    }
+                    if (!item.role || !item.content) {
+                        console.warn(`Skipping item at index ${index}: missing role or content`);
+                        return false;
+                    }
+                    return true;
+                });
+                
+                if (validatedHistory.length === 0) {
+                    console.warn('No valid history items found in imported file');
+                    return;
+                }
+                
                 const currentHistory = getHistory();
-                const mergedHistory = [...importedData, ...currentHistory]
+                const mergedHistory = [...validatedHistory, ...currentHistory]
                     .slice(0, MAX_HISTORY_ITEMS);
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(mergedHistory));
-                console.log('History imported successfully');
+                console.log(`History imported successfully (${validatedHistory.length} items)`);
+            } catch (parseError) {
+                console.error('Error parsing imported file:', parseError);
             }
         };
         reader.readAsText(file);
