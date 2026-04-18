@@ -67,7 +67,26 @@ def verify_firebase_id_token(id_token: str) -> Optional[dict]:
 
 
 def issue_server_jwt_for_user(username: str, email: str) -> Tuple[str, int]:
-    """Create our server JWT for an existing user and update last login."""
-    token, expires_in = create_access_token(user_id=get_user_by_username(username)["user_id"], username=username, email=email)
-    update_last_login(get_user_by_username(username)["user_id"])
+    """
+    Create JWT token for existing user and update last login.
+    
+    Bug Fix #3: Added null check before accessing user data to prevent crashes.
+    Raises ValueError if user not found instead of crashing with NoneType error.
+    
+    Args:
+        username: Username of the user
+        email: Email of the user
+    
+    Returns:
+        Tuple of (token, expires_in_hours)
+    
+    Raises:
+        ValueError: If user not found in database
+    """
+    user = get_user_by_username(username)
+    if not user:
+        raise ValueError(f"User {username} not found")
+    
+    token, expires_in = create_access_token(user_id=user["user_id"], username=username, email=email)
+    update_last_login(user["user_id"])
     return token, expires_in

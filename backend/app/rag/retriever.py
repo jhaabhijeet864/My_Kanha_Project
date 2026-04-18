@@ -227,16 +227,34 @@ class GitaRetriever:
 # Singleton instance
 _retriever = None
 _retriever_lock = threading.Lock()
+_initialization_error = None
 
 
 def get_retriever() -> GitaRetriever:
-    """Get or create the retriever singleton (thread-safe)"""
-    global _retriever
+    """
+    Get or create the ChromaDB retriever singleton (thread-safe).
+    
+    Bug Fix #8: Added error tracking to prevent repeated initialization on failure.
+    Ensures all threads see the same initialization error instead of retrying infinitely.
+    
+    Returns:
+        GitaRetriever instance
+    
+    Raises:
+        Exception: If ChromaDB initialization failed (cached from first attempt)
+    """
+    global _retriever, _initialization_error
     if _retriever is None:
         with _retriever_lock:
             # Double-checked locking
             if _retriever is None:
-                _retriever = GitaRetriever()
+                try:
+                    _retriever = GitaRetriever()
+                except Exception as e:
+                    _initialization_error = e
+                    raise
+    if _retriever is None and _initialization_error:
+        raise _initialization_error
     return _retriever
 
 

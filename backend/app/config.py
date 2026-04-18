@@ -61,7 +61,6 @@ class Settings(BaseSettings):
         "http://localhost:8000",
         "http://127.0.0.1:8000",
         "http://localhost:8080",
-        "null",  # For file:// protocol
         "https://my-kanha-apk.web.app",
         "https://my-kanha-apk.firebaseapp.com",
         "https://my-kanha.web.app",

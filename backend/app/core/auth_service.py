@@ -17,7 +17,9 @@ from app.models.user_models import TokenData
 
 
 # JWT Configuration
-JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "change-me-in-production-secret-key-12345")
+JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+if not JWT_SECRET_KEY:
+    raise ValueError("CRITICAL: JWT_SECRET_KEY must be set in environment variables for security")
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRATION_HOURS = int(os.getenv("JWT_EXPIRATION_HOURS", "24"))
 
@@ -37,53 +39,60 @@ def get_db_connection():
 
 
 def init_db():
-    """Initialize SQLite database for users."""
+    """
+    Initialize SQLite database for users.
+    
+    Bug Fix #1: Wrapped with try-finally to prevent connection leaks.
+    Creates users and chat_history tables with proper schema.
+    """
     try:
         conn = get_db_connection()
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS users (
-                user_id TEXT PRIMARY KEY,
-                username TEXT UNIQUE NOT NULL,
-                email TEXT UNIQUE NOT NULL,
-                full_name TEXT,
-                password_hash TEXT NOT NULL,
-                firebase_uid TEXT UNIQUE,
-                auth_provider TEXT DEFAULT 'local',
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                last_login TIMESTAMP,
-                is_active BOOLEAN DEFAULT 1
-            )
-        """)
+        try:
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS users (
+                    user_id TEXT PRIMARY KEY,
+                    username TEXT UNIQUE NOT NULL,
+                    email TEXT UNIQUE NOT NULL,
+                    full_name TEXT,
+                    password_hash TEXT NOT NULL,
+                    firebase_uid TEXT UNIQUE,
+                    auth_provider TEXT DEFAULT 'local',
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    last_login TIMESTAMP,
+                    is_active BOOLEAN DEFAULT 1
+                )
+            """)
 
-        # Migrations for new columns
-        try:
-            cursor.execute("ALTER TABLE users ADD COLUMN firebase_uid TEXT UNIQUE")
-        except Exception:
-            pass
-        try:
-            cursor.execute("ALTER TABLE users ADD COLUMN auth_provider TEXT DEFAULT 'local'")
-        except Exception:
-            pass
-        
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS chat_history (
-                id TEXT PRIMARY KEY,
-                user_id TEXT NOT NULL,
-                session_id TEXT NOT NULL,
-                message TEXT NOT NULL,
-                response TEXT NOT NULL,
-                language TEXT DEFAULT 'english',
-                sources TEXT,
-                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                FOREIGN KEY (user_id) REFERENCES users(user_id)
-            )
-        """)
-        
-        conn.commit()
-        conn.close()
-        logger.info("Database initialized successfully")
+            # Migrations for new columns
+            try:
+                cursor.execute("ALTER TABLE users ADD COLUMN firebase_uid TEXT UNIQUE")
+            except Exception:
+                pass
+            try:
+                cursor.execute("ALTER TABLE users ADD COLUMN auth_provider TEXT DEFAULT 'local'")
+            except Exception:
+                pass
+            
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS chat_history (
+                    id TEXT PRIMARY KEY,
+                    user_id TEXT NOT NULL,
+                    session_id TEXT NOT NULL,
+                    message TEXT NOT NULL,
+                    response TEXT NOT NULL,
+                    language TEXT DEFAULT 'english',
+                    sources TEXT,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (user_id) REFERENCES users(user_id)
+                )
+            """)
+            
+            conn.commit()
+            logger.info("Database initialized successfully")
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Failed to initialize database: {e}")
         raise
@@ -102,9 +111,32 @@ def hash_password(password: str) -> str:
 
 
 def verify_password(password: str, password_hash: str) -> bool:
-    """Verify password against hash."""
+    """
+    Verify password against stored hash.
+    
+    Validates password hash format to detect corrupted data vs. wrong password.
+    Raises ValueError if hash is corrupted to distinguish from authentication failure.
+    
+    Args:
+        password: Plain text password to verify
+        password_hash: Stored hash in format "salt$hash"
+    
+    Returns:
+        True if password matches hash, False otherwise
+    
+    Raises:
+        ValueError: If password hash is corrupted or in invalid format
+        Exception: On unexpected verification errors (returned as False)
+    
+    Bug Fix #10: Added format validation to detect corrupted hashes
+    """
     try:
-        salt, pwd_hash = password_hash.split("$")
+        parts = password_hash.split("$")
+        if len(parts) != 2:
+            logger.error(f"Invalid password hash format - corrupted hash in database")
+            raise ValueError("Corrupted password hash in database")
+        
+        salt, pwd_hash = parts
         new_hash = hashlib.pbkdf2_hmac(
             'sha256',
             password.encode('utf-8'),
@@ -112,36 +144,57 @@ def verify_password(password: str, password_hash: str) -> bool:
             100000
         )
         return new_hash.hex() == pwd_hash
+    except ValueError:
+        raise
     except Exception as e:
         logger.error(f"Password verification error: {e}")
         return False
 
 
 def create_user(username: str, email: str, password: str, full_name: Optional[str] = None) -> dict:
-    """Create a new user."""
+    """
+    Create a new user account.
+    
+    Bug Fix #1: Wrapped database operations with try-finally to prevent connection leaks.
+    
+    Args:
+        username: Unique username
+        email: Unique email address
+        password: Plain text password (will be hashed)
+        full_name: Optional user's full name
+    
+    Returns:
+        Dictionary with user_id, username, email, full_name, created_at
+    
+    Raises:
+        ValueError: If username or email already exists
+        Exception: On database errors
+    """
     try:
         user_id = secrets.token_hex(16)
         password_hash = hash_password(password)
         
         conn = get_db_connection()
-        cursor = conn.cursor()
+        try:
+            cursor = conn.cursor()
 
-        cursor.execute("""
-            INSERT INTO users (user_id, username, email, full_name, password_hash)
-            VALUES (?, ?, ?, ?, ?)
-        """, (user_id, username, email, full_name, password_hash))
-        
-        conn.commit()
-        conn.close()
-        
-        logger.info(f"User created: {username}")
-        return {
-            "user_id": user_id,
-            "username": username,
-            "email": email,
-            "full_name": full_name,
-            "created_at": datetime.now()
-        }
+            cursor.execute("""
+                INSERT INTO users (user_id, username, email, full_name, password_hash)
+                VALUES (?, ?, ?, ?, ?)
+            """, (user_id, username, email, full_name, password_hash))
+            
+            conn.commit()
+            
+            logger.info(f"User created: {username}")
+            return {
+                "user_id": user_id,
+                "username": username,
+                "email": email,
+                "full_name": full_name,
+                "created_at": datetime.now()
+            }
+        finally:
+            conn.close()
     except sqlite3.IntegrityError as e:
         logger.error(f"User creation failed: {e}")
         if "username" in str(e):
@@ -155,22 +208,33 @@ def create_user(username: str, email: str, password: str, full_name: Optional[st
 
 
 def get_user_by_username(username: str) -> Optional[dict]:
-    """Get user by username."""
+    """
+    Retrieve user by username or email.
+    
+    Bug Fix #1: Wrapped with try-finally to prevent connection leaks.
+    
+    Args:
+        username: Username or email to search for
+    
+    Returns:
+        User dict with user_id, username, email, etc. or None if not found
+    """
     try:
         conn = get_db_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            SELECT user_id, username, email, full_name, password_hash, created_at, last_login
-            FROM users
-            WHERE (username = ? OR email = ?) AND is_active = 1
-        """, (username, username))
-        
-        row = cursor.fetchone()
-        conn.close()
-        
-        return dict(row) if row else None
+        try:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                SELECT user_id, username, email, full_name, password_hash, created_at, last_login
+                FROM users
+                WHERE (username = ? OR email = ?) AND is_active = 1
+            """, (username, username))
+            
+            row = cursor.fetchone()
+            return dict(row) if row else None
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Error fetching user: {e}")
         return None
@@ -180,19 +244,21 @@ def get_user_by_email(email: str) -> Optional[dict]:
     """Get user by email."""
     try:
         conn = get_db_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute(
-            """
-            SELECT user_id, username, email, full_name, password_hash, firebase_uid, auth_provider, created_at, last_login
-            FROM users
-            WHERE email = ? AND is_active = 1
-            """,
-            (email,),
-        )
-        row = cursor.fetchone()
-        conn.close()
-        return dict(row) if row else None
+        try:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT user_id, username, email, full_name, password_hash, firebase_uid, auth_provider, created_at, last_login
+                FROM users
+                WHERE email = ? AND is_active = 1
+                """,
+                (email,),
+            )
+            row = cursor.fetchone()
+            return dict(row) if row else None
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Error fetching user by email: {e}")
         return None
@@ -202,19 +268,21 @@ def get_user_by_firebase_uid(uid: str) -> Optional[dict]:
     """Get user by firebase UID."""
     try:
         conn = get_db_connection()
-        conn.row_factory = sqlite3.Row
-        cursor = conn.cursor()
-        cursor.execute(
-            """
-            SELECT user_id, username, email, full_name, password_hash, firebase_uid, auth_provider, created_at, last_login
-            FROM users
-            WHERE firebase_uid = ? AND is_active = 1
-            """,
-            (uid,),
-        )
-        row = cursor.fetchone()
-        conn.close()
-        return dict(row) if row else None
+        try:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT user_id, username, email, full_name, password_hash, firebase_uid, auth_provider, created_at, last_login
+                FROM users
+                WHERE firebase_uid = ? AND is_active = 1
+                """,
+                (uid,),
+            )
+            row = cursor.fetchone()
+            return dict(row) if row else None
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Error fetching user by firebase uid: {e}")
         return None
@@ -227,13 +295,15 @@ def create_or_link_firebase_user(uid: str, email: str, name: Optional[str] = Non
         # Link UID if missing
         try:
             conn = get_db_connection()
-            cursor = conn.cursor()
-            cursor.execute(
-                "UPDATE users SET firebase_uid = ?, auth_provider = 'firebase' WHERE user_id = ?",
-                (uid, existing["user_id"]),
-            )
-            conn.commit()
-            conn.close()
+            try:
+                cursor = conn.cursor()
+                cursor.execute(
+                    "UPDATE users SET firebase_uid = ?, auth_provider = 'firebase' WHERE user_id = ?",
+                    (uid, existing["user_id"]),
+                )
+                conn.commit()
+            finally:
+                conn.close()
         except Exception as e:
             logger.warning(f"Failed to link firebase UID: {e}")
         return existing
@@ -246,27 +316,29 @@ def create_or_link_firebase_user(uid: str, email: str, name: Optional[str] = Non
         password_hash = hash_password(secrets.token_hex(16))
 
         conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute(
-            """
-            INSERT INTO users (user_id, username, email, full_name, password_hash, firebase_uid, auth_provider)
-            VALUES (?, ?, ?, ?, ?, ?, 'firebase')
-            """,
-            (user_id, username, email, name, password_hash, uid),
-        )
-        conn.commit()
-        conn.close()
+        try:
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                INSERT INTO users (user_id, username, email, full_name, password_hash, firebase_uid, auth_provider)
+                VALUES (?, ?, ?, ?, ?, ?, 'firebase')
+                """,
+                (user_id, username, email, name, password_hash, uid),
+            )
+            conn.commit()
 
-        logger.info(f"Firebase user created: {username}")
-        return {
-            "user_id": user_id,
-            "username": username,
-            "email": email,
-            "full_name": name,
-            "firebase_uid": uid,
-            "auth_provider": "firebase",
-            "created_at": datetime.now(),
-        }
+            logger.info(f"Firebase user created: {username}")
+            return {
+                "user_id": user_id,
+                "username": username,
+                "email": email,
+                "full_name": name,
+                "firebase_uid": uid,
+                "auth_provider": "firebase",
+                "created_at": datetime.now(),
+            }
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Error creating firebase user: {e}")
         raise
@@ -276,16 +348,18 @@ def update_last_login(user_id: str) -> None:
     """Update user's last login timestamp."""
     try:
         conn = get_db_connection()
-        cursor = conn.cursor()
-        
-        cursor.execute("""
-            UPDATE users
-            SET last_login = CURRENT_TIMESTAMP
-            WHERE user_id = ?
-        """, (user_id,))
-        
-        conn.commit()
-        conn.close()
+        try:
+            cursor = conn.cursor()
+            
+            cursor.execute("""
+                UPDATE users
+                SET last_login = CURRENT_TIMESTAMP
+                WHERE user_id = ?
+            """, (user_id,))
+            
+            conn.commit()
+        finally:
+            conn.close()
     except Exception as e:
         logger.error(f"Error updating last login: {e}")
 

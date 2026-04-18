@@ -120,7 +120,12 @@ class GroqClient(BaseLLMClient):
         temperature: float = None,
         max_tokens: int = None,
     ) -> AsyncGenerator[str, None]:
-        """Generate a streaming response from Groq API."""
+        """
+        Generate a streaming response from Groq API.
+        
+        Bug Fix #9: Added logging for JSON decode errors that previously failed silently.
+        Now tracks malformed chunks for debugging while continuing stream.
+        """
         if temperature is None:
             temperature = settings.LLM_TEMPERATURE
         if max_tokens is None:
@@ -157,7 +162,8 @@ class GroqClient(BaseLLMClient):
                                 data = json.loads(data_str)
                                 if delta := data.get("choices", [{}])[0].get("delta", {}).get("content"):
                                     yield delta
-                            except json.JSONDecodeError:
+                            except json.JSONDecodeError as e:
+                                logger.warning(f"Failed to parse JSON from stream: {data_str[:100]}")
                                 continue
 
         except Exception as e:

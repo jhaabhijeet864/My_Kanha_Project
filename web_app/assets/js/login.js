@@ -48,39 +48,57 @@ async function exchangeFirebaseToken() {
 }
 
 // Handle form submission for email/password login
-document.getElementById('loginForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
+let loginFormInitialized = false;
 
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const loginBtn = document.querySelector('.login-btn');
+function initializeLoginForm() {
+  if (loginFormInitialized) return;
+  
+  const loginForm = document.getElementById('loginForm');
+  if (!loginForm) return;
+  
+  loginForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
 
-  loginBtn.disabled = true;
-  const originalText = loginBtn.textContent;
-  loginBtn.textContent = 'Signing in...';
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const loginBtn = document.querySelector('.login-btn');
 
-  try {
-    if (!window.Firebase) throw new Error('Firebase not initialized');
-    await window.Firebase.signInWithEmailAndPassword(window.Firebase.auth, email, password);
-    await exchangeFirebaseToken();
-    document.getElementById('loginForm').reset();
-  } catch (error) {
-    console.error('Email login error:', error);
-    showError(error.message || 'Login failed. Please try again.');
-    loginBtn.disabled = false;
-    loginBtn.textContent = originalText;
-  }
-});
+    loginBtn.disabled = true;
+    const originalText = loginBtn.textContent;
+    loginBtn.textContent = 'Signing in...';
+
+    try {
+      if (!window.Firebase) throw new Error('Firebase not initialized');
+      await window.Firebase.signInWithEmailAndPassword(window.Firebase.auth, email, password);
+      await exchangeFirebaseToken();
+      document.getElementById('loginForm').reset();
+    } catch (error) {
+      console.error('Email login error:', error);
+      showError(error.message || 'Login failed. Please try again.');
+      loginBtn.disabled = false;
+      loginBtn.textContent = originalText;
+    }
+  });
+  
+  loginFormInitialized = true;
+}
 
 // Show error message
 function showError(message) {
-  // Create error element
+  // Create error element if it doesn't exist
   let errorDiv = document.querySelector('.error-message');
   
   if (!errorDiv) {
     errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
-    document.querySelector('.login-form').insertBefore(errorDiv, document.querySelector('.form-group'));
+    const form = document.getElementById('loginForm');
+    if (form) {
+      form.insertBefore(errorDiv, form.firstChild);
+    } else {
+      console.error('Login form not found');
+      alert(message); // Fallback to alert if form doesn't exist
+      return;
+    }
   }
   
   errorDiv.textContent = message;
@@ -92,7 +110,7 @@ function showError(message) {
   }, 5000);
 }
 
-// Check if already logged in
+// Check if already logged in and initialize form when DOM is ready
 window.addEventListener('DOMContentLoaded', function() {
   const authToken = localStorage.getItem('authToken');
   if (authToken) {
@@ -108,10 +126,13 @@ window.addEventListener('DOMContentLoaded', function() {
       notice.style.display = 'block';
     }
   }
+  
+  // Initialize login form now that DOM is ready
+  initializeLoginForm();
 });
 
-// Google Sign-In initialization
-window.onload = async function() {
+// Google Sign-In initialization - use the same DOMContentLoaded to avoid double initialization
+document.addEventListener('DOMContentLoaded', async function() {
   // Check if returning from a redirect sign-in
   if (window.Firebase && window.Firebase.getRedirectResult) {
     try {
@@ -120,13 +141,16 @@ window.onload = async function() {
         await exchangeFirebaseToken();
         return;
       }
-    } catch (err) {
-      console.error('Redirect result error:', err);
-      // Don't show error here, user might just be loading the page normally
+    } catch (error) {
+      if (error.code !== 'auth/no-redirect-user-in-session') {
+        console.error('Redirect sign-in error:', error);
+      }
     }
   }
+});
 
-  // Hook Google sign-in button
+// Hook Google sign-in button
+document.addEventListener('DOMContentLoaded', function() {
   const googleBtn = document.getElementById('googleSignInBtn');
   if (googleBtn) {
     googleBtn.addEventListener('click', async function(e) {
@@ -170,7 +194,7 @@ window.onload = async function() {
       }
     });
   }
-};
+});
 
 // Add some CSS for error messages dynamically
 const style = document.createElement('style');
