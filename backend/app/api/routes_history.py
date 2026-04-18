@@ -21,7 +21,21 @@ router = APIRouter()
 
 
 def get_current_user(authorization: Optional[str] = Header(None)):
-    """Dependency to get authenticated user from Authorization header."""
+    """
+    Extract and validate JWT token from Authorization header.
+    
+    Bug Fix #6: Made authorization header Optional with proper null check.
+    Returns 401 Unauthorized instead of 422 validation error when header missing.
+    
+    Args:
+        authorization: Authorization header (format: "Bearer <token>")
+    
+    Returns:
+        TokenData with user_id, username, email
+    
+    Raises:
+        HTTPException(401): If header missing, invalid format, or token invalid/expired
+    """
     if not authorization:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
@@ -100,6 +114,21 @@ async def get_conversation(
 ):
     """
     Get a specific conversation session with all messages.
+    
+    Bug Fix #11: Added ge=1 validation to prevent negative/zero values.
+    Query parameter now rejects invalid values at validation layer.
+    
+    Args:
+        session_id: ID of conversation session to retrieve
+        max_messages: Optional limit on number of messages to return (must be >= 1)
+        token_data: Authenticated user token data
+    
+    Returns:
+        Session with metadata and messages
+    
+    Raises:
+        HTTPException(404): If session not found
+        HTTPException(422): If max_messages validation fails
     """
     try:
         session = load_conversation(token_data.user_id, session_id)
@@ -221,7 +250,18 @@ async def cleanup_user_sessions(
 
 
 def compute_session_duration(session) -> float:
-    """Compute duration of session in minutes."""
+    """
+    Compute duration of session in minutes.
+    
+    Bug Fix #7: Replaced bare except with specific exception handling.
+    Now logs the actual error for debugging instead of silently returning 0.
+    
+    Args:
+        session: Session object with created_at and last_updated timestamps
+    
+    Returns:
+        Session duration in minutes (rounded to 2 decimals), or 0 if error
+    """
     from datetime import datetime
     
     try:

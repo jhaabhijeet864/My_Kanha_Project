@@ -231,7 +231,18 @@ _initialization_error = None
 
 
 def get_retriever() -> GitaRetriever:
-    """Get or create the retriever singleton (thread-safe)"""
+    """
+    Get or create the ChromaDB retriever singleton (thread-safe).
+    
+    Bug Fix #8: Added error tracking to prevent repeated initialization on failure.
+    Ensures all threads see the same initialization error instead of retrying infinitely.
+    
+    Returns:
+        GitaRetriever instance
+    
+    Raises:
+        Exception: If ChromaDB initialization failed (cached from first attempt)
+    """
     global _retriever, _initialization_error
     if _retriever is None:
         with _retriever_lock:

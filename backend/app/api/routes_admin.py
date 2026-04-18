@@ -92,9 +92,19 @@ metrics_tracker = MetricsTracker()
 
 def require_api_key(x_api_key: Optional[str] = Header(None)):
     """
-    Verify admin API key - enforce authentication for all admin endpoints.
+    Verify admin API key for all admin endpoints.
     
-    Never allows unauthenticated access to admin endpoints, even in DEBUG mode.
+    Bug Fix #5: Removed DEBUG mode bypass that allowed unauthenticated access.
+    Now enforces authentication for all admin operations regardless of DEBUG setting.
+    
+    Args:
+        x_api_key: API key from X-API-Key header
+    
+    Returns:
+        True if authentication successful
+    
+    Raises:
+        HTTPException(401): If API_KEY not configured or provided key is invalid
     """
     if not settings.API_KEY:
         raise HTTPException(

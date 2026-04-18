@@ -39,7 +39,12 @@ def get_db_connection():
 
 
 def init_db():
-    """Initialize SQLite database for users."""
+    """
+    Initialize SQLite database for users.
+    
+    Bug Fix #1: Wrapped with try-finally to prevent connection leaks.
+    Creates users and chat_history tables with proper schema.
+    """
     try:
         conn = get_db_connection()
         try:
@@ -106,7 +111,25 @@ def hash_password(password: str) -> str:
 
 
 def verify_password(password: str, password_hash: str) -> bool:
-    """Verify password against hash."""
+    """
+    Verify password against stored hash.
+    
+    Validates password hash format to detect corrupted data vs. wrong password.
+    Raises ValueError if hash is corrupted to distinguish from authentication failure.
+    
+    Args:
+        password: Plain text password to verify
+        password_hash: Stored hash in format "salt$hash"
+    
+    Returns:
+        True if password matches hash, False otherwise
+    
+    Raises:
+        ValueError: If password hash is corrupted or in invalid format
+        Exception: On unexpected verification errors (returned as False)
+    
+    Bug Fix #10: Added format validation to detect corrupted hashes
+    """
     try:
         parts = password_hash.split("$")
         if len(parts) != 2:
@@ -129,7 +152,24 @@ def verify_password(password: str, password_hash: str) -> bool:
 
 
 def create_user(username: str, email: str, password: str, full_name: Optional[str] = None) -> dict:
-    """Create a new user."""
+    """
+    Create a new user account.
+    
+    Bug Fix #1: Wrapped database operations with try-finally to prevent connection leaks.
+    
+    Args:
+        username: Unique username
+        email: Unique email address
+        password: Plain text password (will be hashed)
+        full_name: Optional user's full name
+    
+    Returns:
+        Dictionary with user_id, username, email, full_name, created_at
+    
+    Raises:
+        ValueError: If username or email already exists
+        Exception: On database errors
+    """
     try:
         user_id = secrets.token_hex(16)
         password_hash = hash_password(password)
@@ -168,7 +208,17 @@ def create_user(username: str, email: str, password: str, full_name: Optional[st
 
 
 def get_user_by_username(username: str) -> Optional[dict]:
-    """Get user by username."""
+    """
+    Retrieve user by username or email.
+    
+    Bug Fix #1: Wrapped with try-finally to prevent connection leaks.
+    
+    Args:
+        username: Username or email to search for
+    
+    Returns:
+        User dict with user_id, username, email, etc. or None if not found
+    """
     try:
         conn = get_db_connection()
         try:
