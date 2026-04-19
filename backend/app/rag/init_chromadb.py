@@ -8,13 +8,13 @@ from pathlib import Path
 from typing import Optional
 from datetime import datetime
 
+from app.config import settings
 from app.rag.retriever import GitaRetriever
 
 logger = logging.getLogger(__name__)
 
-# Paths
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-VECTOR_DB_PATH = PROJECT_ROOT / 'vector_db' / 'chroma'
+# Paths - now using settings
+VECTOR_DB_PATH = Path(settings.CHROMA_PERSIST_DIR)
 INIT_FLAG_FILE = VECTOR_DB_PATH / '.initialized'
 
 

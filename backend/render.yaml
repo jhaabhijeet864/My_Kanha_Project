@@ -4,9 +4,9 @@ services:
     runtime: python
     region: oregon
     plan: free
-    rootDir: backend
-    buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: cd /opt/render/project/src/backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # Removed rootDir to allow the app to access data outside the backend folder
+    buildCommand: cd backend && chmod +x build.sh && ./build.sh
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0

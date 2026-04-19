@@ -11,11 +11,12 @@ import chromadb
 from chromadb import PersistentClient
 from chromadb.config import Settings
 
+from app.config import settings
+
 logger = logging.getLogger(__name__)
 
-# Paths
-PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
-VECTOR_DB_PATH = PROJECT_ROOT / 'vector_db' / 'chroma'
+# Paths - now using settings
+VECTOR_DB_PATH = Path(settings.CHROMA_PERSIST_DIR)
 
 
 class GitaRetriever:
@@ -24,12 +25,15 @@ class GitaRetriever:
     def __init__(self):
         """Initialize ChromaDB client with persistent storage"""
         try:
+            # Ensure path is absolute if possible
+            persist_path = str(VECTOR_DB_PATH.absolute()) if not VECTOR_DB_PATH.is_absolute() else str(VECTOR_DB_PATH)
+            
             self.client = PersistentClient(
-                path=str(VECTOR_DB_PATH),
+                path=persist_path,
                 settings=Settings(anonymized_telemetry=False),
             )
             self.collection = self.client.get_collection(name="gita_verses")
-            logger.info(f"Connected to ChromaDB with {self.collection.count()} indexed verses")
+            logger.info(f"Connected to ChromaDB at {persist_path} with {self.collection.count()} indexed verses")
         except Exception as e:
             logger.error(f"Failed to initialize ChromaDB: {str(e)}")
             raise
