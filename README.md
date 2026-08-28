@@ -7,6 +7,7 @@
 [![PWA Ready](https://img.shields.io/badge/PWA-Ready-5A0FC8.svg)](https://web.dev/progressive-web-apps/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+
 **My Kanha** is an AI-powered spiritual chatbot that brings the profound teachings of the Bhagavad Gita to life through conversational AI. Krishna responds as a **warm, personal friend** - not a verse-dumping machine. Users can ask life's deepest questions and receive guidance grounded in authentic scripture.
 
 ---
